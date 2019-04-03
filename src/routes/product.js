@@ -34,13 +34,27 @@ let upload = multer({ storage: storage }).array('pic-file', 10)
 let product = express.Router()
 
 product.get('/', async(req, res, next) => {
-    let items = await Product.find({})
+    let seeAll = req.query.seeAll
+    let condition = {}
+
+    if (!seeAll) {
+        condition = { pushedToEtsy: 0 }
+    }
+
+    let items = await Product.find(condition)
     res.render('product', { items: items })
 })
 
 product.route('/upload')
     .get(async(req, res) => {
-        let items = await Product.find({pushedToEtsy: 0})
+        let seeAll = req.query.seeAll
+        let condition = {}
+
+        if (!seeAll) {
+            condition = { pushedToEtsy: 0 }
+        }
+
+        let items = await Product.find(condition)
         res.render('product', { items: items })
     })
     .post(async(req, res) => {

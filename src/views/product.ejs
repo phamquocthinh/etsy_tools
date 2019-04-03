@@ -11,6 +11,10 @@
     </div>
   </div>
 </form>
+<div style="float: left">
+<a><button type="button" class="btnSeeAll btn btn-success">All Items</button></a> 
+<a><button type="button" class="btnSeePush btn btn-success">Non-Pushed</button></a>
+</div>
 
 <% if(items.length) { %>
     <div style="width: 100%; height:auto; margin-top: 30px; background-color: white;">
@@ -58,6 +62,14 @@
 <% } %>
 <script>
     $(function() {
+        
+        $("button.btnSeeAll").click(function(e) {
+            window.location.replace('/product?seeAll=true')
+        })
+        $("button.btnSeePush").click(function(e) {
+            window.location.replace('/product')
+        })
+
         $("button.btnSave").click(function(e) {
             e.preventDefault();
             let id = $(this).attr("data-id");
