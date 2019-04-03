@@ -1,0 +1,7 @@
+"use strict";
+
+// config/connection.js
+
+// expose our config directly to our application using module.exports
+module.exports = {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jb25maWcvY29ubmVjdGlvbi5qcyJdLCJuYW1lcyI6WyJtb2R1bGUiLCJleHBvcnRzIl0sIm1hcHBpbmdzIjoiOztBQUFBOztBQUVBO0FBQ0FBLE9BQU9DLE9BQVAsR0FBaUIsRUFBakIiLCJmaWxlIjoiY29ubmVjdGlvbi5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIGNvbmZpZy9jb25uZWN0aW9uLmpzXG5cbi8vIGV4cG9zZSBvdXIgY29uZmlnIGRpcmVjdGx5IHRvIG91ciBhcHBsaWNhdGlvbiB1c2luZyBtb2R1bGUuZXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG59OyJdfQ==

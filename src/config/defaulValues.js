@@ -3,13 +3,13 @@ module.exports = {
     MONGO_PORT: '27017',
     MONGO_DB: 'etsy_db',
 
-    CONSUMER_KEY: "0knnnx78v7lgld0vs633ktut",
-    CONSUMER_SECRET: "t009aeebvl",
-    TOKEN: "40b51993aa73ca5743056d8d2d6362",
-    TOKEN_SECRET: "c67ad4f290",
-    CALLBACK_URL: 'http://locahost:7070/token/callback',
+    CONSUMER_KEY: "mj601vr7uci2twzysrq6du2v",
+    CONSUMER_SECRET: "y25ee7sn8j",
+    TOKEN: "18b31fc567ae3178237368e067696c",
+    TOKEN_SECRET: "fba844346f",
+    CALLBACK_URL: 'http://localhost:7070/token/callback',
 
-    PRICE: 10,
-    SHIPPING_TEMPLATE_ID: 71294432621,
+    PRICE: 21.95,
+    SHIPPING_TEMPLATE_ID: 70555085858,
     TAXONOMY_ID: 482
 }

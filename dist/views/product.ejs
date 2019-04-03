@@ -1,0 +1,115 @@
+<% include header.ejs %>
+<form class="form form-horizontal" role="form"  action="/product/upload" enctype="multipart/form-data" method="post">   <div class="form-group">
+    <label class="control-label col-sm-2">Select File:</label>
+    <div class="control-label col-sm-10">
+		  <input type="file" name="pic-file" multiple/>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-10">
+      <button type="submit" class="btn btn-primary btn-lg">Upload</button>
+    </div>
+  </div>
+</form>
+
+<% if(items.length) { %>
+    <div style="width: 100%; height:auto; margin-top: 30px; background-color: white;">
+        <table id="buzz-grid" class="table table-striped table-bordered table-hover">
+                <tr>
+                    <th width="15%">
+                        name
+                    </th>
+                    <th width="20%">
+                        image
+                    </th>
+                    <th width="20%">
+                        title
+                    </th>
+                    <th width="20%">
+                        description
+                    </th>
+                    <th width="15%">
+                        tags
+                    </th>
+                    <th width="10%">
+                        action
+                    </th>
+                </tr>
+            <% items.forEach(item => { %>
+    
+            <tr>
+                <td ><%= item.name %></td>
+                <td><img style="max-height: 200px" src="<%= item.dir %>"></img></td>
+                <td class="item-title" contenteditable="true"><%= item.title %></td>
+                <td class="item-des" contenteditable="true"><%= item.description %></td>
+                <td class="item-tags" contenteditable="true"><%= item.tags.join() %></td>
+                <td>
+                    <a><button data-id="<%=item._id %>" type="button" class="btnSave btn btn-info btn-sm">Save</button></a>
+                    <% if((item.title && item.description) && !item.pushedToEtsy) { %>
+                        <a><button data-id="<%=item._id %>" type="button" class="btnPush btn btn-info btn-sm">Push</button></a>
+                    <% } %>
+                </td>
+            </tr>
+    
+            <% }) %>
+    
+        </table>
+    </div>
+<% } %>
+<script>
+    $(function() {
+        $("button.btnSave").click(function(e) {
+            e.preventDefault();
+            let id = $(this).attr("data-id");
+            let title = $(this).parents("tr").find(".item-title")[0].innerText
+            let description = $(this).parents("tr").find(".item-des")[0].innerText
+            let tagsText = $(this).parents("tr").find(".item-tags")[0].innerText
+            let tags = []
+
+            if (tagsText) tags = tagsText.split(",")
+            
+            let data = {
+                title,description,tags
+            }
+
+            if (confirm(`Confirm save?`)) {
+                $.ajax({
+                    url: "/product/" + id,
+                    type: "POST",
+                    data: JSON.stringify(data),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function(response){
+                        alert("Update successful")
+                        location.reload()
+                    },
+                    error: function(xhr, textStatus, error) {
+                        alert("Got error when save data!")
+                    }
+                })
+            }
+        })
+
+        $("button.btnPush").click(function(e) {
+            e.preventDefault();
+            let id = $(this).attr("data-id")
+
+            $("button.btnPush").attr('disabled', 'disabled')
+            $.ajax({
+                url: `/product/${id}/push`,
+                type: "POST",
+                success: function(response){
+                    console.log(response)
+                    alert("Update successful")
+                    location.reload()
+                },
+                error: function(xhr, textStatus, error) {
+                    console.log(xhr.status)
+                    alert("Got error when pushing data!")
+                }
+            })
+        })
+    })
+</script>
+
+<% include footer.ejs %>
