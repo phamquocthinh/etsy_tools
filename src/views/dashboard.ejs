@@ -1,0 +1,27 @@
+<% include header.ejs %>
+  <div class="container-fluid mt-5">
+    <a><button id="btnGetToken" type="button" class="btn btn-info btn-sm">Get Token</button></a>
+  </div>
+  <script>
+    $(function() {
+        
+        $("button#btnGetToken").click(function(e) {
+            e.preventDefault();
+            let id = $(this).attr("data-id")
+
+            $.ajax({
+                url: `/`,
+                type: "POST",
+                contentType: "application/json",
+                dataType: "json",
+                success: function(a){
+                    alert("Update successful")
+                },
+                error: function(xhr, textStatus, error) {
+                    alert("Got error when deactive account!")
+                }
+            })
+        })
+    })
+</script>
+  <% include footer.ejs %>
