@@ -162,7 +162,7 @@ product.route('/:id/push')
             return res.json({'message': 'success'})
         } catch(e) {
             console.log(e)
-            return res.json({'message': 'error', 'error': JSON.stringify(e)})
+            return res.json({'message': 'error', 'error': e})
         }
     })
 

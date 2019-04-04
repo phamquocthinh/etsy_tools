@@ -116,7 +116,7 @@
                         alert("Update successful")
                         location.reload()
                     } else {
-                        alert(response)
+                        alert(JSON.stringify(response.error))
                     }
                 },
                 error: function(xhr, textStatus, error) {
