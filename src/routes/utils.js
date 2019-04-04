@@ -46,7 +46,10 @@ const pushItem = (oauth, data) => {
                     return resolve(listingId)
                 } catch(e) {
                     console.log('Error pushitem', e)
-                    return reject(e)
+                    return reject({
+                        error: 'Pushing item error',
+                        message: body
+                    })
                 }
             }
         )
@@ -64,7 +67,12 @@ const updateImage = (oauth, id, file) => {
                 oauth: oauth
             },
             function(err, response, body) {
-                if (err) return reject(err)
+                if (err) {
+                    return reject({
+                        error: 'Update image error',
+                        message: err
+                    })
+                } 
                 resolve(body)
             }
         )
@@ -91,13 +99,21 @@ const updateVariations = (oauth, id, price) => {
                 form: data
             },
             function(err, response, body) {
-                if (err) return reject(err)
+                if (err) {
+                    return reject({
+                        error: 'Update Variations error',
+                        message: error
+                    })
+                }
 
                 try {
                     body = JSON.parse(body)
                 } catch(e) {
-                    return reject(e)
-                }  
+                    return reject({
+                        error: 'Update variations error',
+                        message: body
+                    })
+                }
 
                 resolve()
             }

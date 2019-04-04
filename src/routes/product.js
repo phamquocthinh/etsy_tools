@@ -159,10 +159,10 @@ product.route('/:id/push')
             }
             await updateVariations(oauth, listingId, data.price)
             await Product.findByIdAndUpdate(id, { pushedToEtsy: 1 })
-            return res.json({'message': 'PUSHED'})
+            return res.json({'message': 'success'})
         } catch(e) {
             console.log(e)
-            return res.json({'message': 'PUSHED', 'error': e})
+            return res.json({'message': 'error', 'error': e})
         }
     })
 
