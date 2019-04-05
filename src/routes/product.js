@@ -80,7 +80,7 @@ product.route('/upload')
                         //let tshirt = await jimp.read(tShirtPath)
                         let image = await jimp.read(imagePath)
 
-                        await image.resize(375, jimp.AUTO)
+                        await image.resize(362, jimp.AUTO)
                         //await tshirt.composite(image, 315, 150)
 
                         let colors = fs.readdirSync(path.join(__dirname, '../public/images/color/'))
@@ -89,7 +89,7 @@ product.route('/upload')
                         for (const color of colors) {
                             let colorPath = path.join(__dirname, '../public/images/color/' + color)
                             let colorFile = await jimp.read(colorPath)
-                            await colorFile.composite(image, 490, 380)
+                            await colorFile.composite(image, 320, 250)
                             await colorFile.write(path.join(__dirname, '../public/images/products/' + file.filename + '/' + color))
                         }
                     } catch(e) {
