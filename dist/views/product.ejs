@@ -112,8 +112,12 @@
                 type: "POST",
                 success: function(response){
                     console.log(response)
-                    alert("Update successful")
-                    location.reload()
+                    if (response.message == 'success') {
+                        alert("Update successful")
+                        location.reload()
+                    } else {
+                        alert(JSON.stringify(response.error))
+                    }
                 },
                 error: function(xhr, textStatus, error) {
                     console.log(xhr.status)

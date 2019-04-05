@@ -75,22 +75,21 @@ product.route('/upload')
                     createdAt: new Date()
                 }).then(async() => {
                     try {
-                        let tShirtPath = path.join(__dirname, '../public/images/shirts/tee-front.png')
+                        //let tShirtPath = path.join(__dirname, '../public/images/shirts/tee-front.png')
                         let imagePath = path.join(__dirname, '../public/images/uploads/' + file.filename)
-                        let tshirt = await jimp.read(tShirtPath)
+                        //let tshirt = await jimp.read(tShirtPath)
                         let image = await jimp.read(imagePath)
 
                         await image.resize(400, jimp.AUTO)
-                        await tshirt.composite(image, 315, 150)
+                        //await tshirt.composite(image, 315, 150)
 
                         let colors = fs.readdirSync(path.join(__dirname, '../public/images/color/'))
                         fs.mkdirSync(path.join(__dirname, '../public/images/products/' + file.filename))
 
                         for (const color of colors) {
                             let colorPath = path.join(__dirname, '../public/images/color/' + color)
-                            console.log(colorPath)
                             let colorFile = await jimp.read(colorPath)
-                            await colorFile.composite(tshirt, 0, 0)
+                            await colorFile.composite(image, 300, 200)
                             await colorFile.write(path.join(__dirname, '../public/images/products/' + file.filename + '/' + color))
                         }
                     } catch(e) {
