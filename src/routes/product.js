@@ -150,6 +150,13 @@ product.route('/:id/push')
             let oauth = getOauth(req)
             let listingId = await pushItem(oauth, data)
 
+            let sizes = fs.readdirSync(path.join(__dirname, '../public/images/size/'))
+
+            for (const size of sizes) {
+                let sizePath = path.join(__dirname, '../public/images/size/' + size)
+                await updateImage(oauth, listingId, sizePath)
+            }
+
             let files = fs.readdirSync(path.join(__dirname, '../public/images/products/' + item.name + '/'))
 
             for (const file of files) {
