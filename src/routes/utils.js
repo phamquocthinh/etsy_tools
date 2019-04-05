@@ -130,7 +130,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "S"
                 ],
@@ -168,7 +168,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "S"
                 ],
@@ -206,7 +206,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "S"
                 ],
@@ -244,7 +244,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "S"
                 ],
@@ -282,7 +282,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "S"
                 ],
@@ -320,7 +320,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "M"
                 ],
@@ -358,7 +358,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "M"
                 ],
@@ -396,7 +396,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "M"
                 ],
@@ -434,7 +434,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "M"
                 ],
@@ -472,7 +472,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "M"
                 ],
@@ -510,7 +510,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "L"
                 ],
@@ -548,7 +548,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "L"
                 ],
@@ -586,7 +586,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "L"
                 ],
@@ -624,7 +624,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "L"
                 ],
@@ -662,7 +662,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "L"
                 ],
@@ -700,7 +700,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "XL"
                 ],
@@ -738,7 +738,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "XL"
                 ],
@@ -776,7 +776,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "XL"
                 ],
@@ -814,7 +814,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "XL"
                 ],
@@ -852,7 +852,7 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
                     "XL"
                 ],
@@ -890,9 +890,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "2X"
+                    "2XL"
                 ],
                 "value_ids": [
                     2147
@@ -928,9 +928,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "2X"
+                    "2XL"
                 ],
                 "value_ids": [
                     2147
@@ -966,9 +966,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "2X"
+                    "2XL"
                 ],
                 "value_ids": [
                     2147
@@ -1004,9 +1004,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "2X"
+                    "2XL"
                 ],
                 "value_ids": [
                     2147
@@ -1042,9 +1042,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "2X"
+                    "2XL"
                 ],
                 "value_ids": [
                     2147
@@ -1080,9 +1080,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "3X"
+                    "3XL"
                 ],
                 "value_ids": [
                     2149
@@ -1118,9 +1118,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "3X"
+                    "3XL"
                 ],
                 "value_ids": [
                     2149
@@ -1156,9 +1156,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "3X"
+                    "3XL"
                 ],
                 "value_ids": [
                     2149
@@ -1194,9 +1194,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "3X"
+                    "3XL"
                 ],
                 "value_ids": [
                     2149
@@ -1232,9 +1232,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "3X"
+                    "3XL"
                 ],
                 "value_ids": [
                     2149
@@ -1270,9 +1270,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "4X"
+                    "4XL"
                 ],
                 "value_ids": [
                     2151
@@ -1308,9 +1308,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "4X"
+                    "4XL"
                 ],
                 "value_ids": [
                     2151
@@ -1346,9 +1346,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "4X"
+                    "4XL"
                 ],
                 "value_ids": [
                     2151
@@ -1384,9 +1384,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "4X"
+                    "4XL"
                 ],
                 "value_ids": [
                     2151
@@ -1422,9 +1422,9 @@ const generateVariations = (listingId, price) => {
                 "property_id": 62809790533,
                 "property_name": "Size",
                 "scale_id": 51,
-                "scale_name": "Letter size (Men's)",
+                "scale_name": "Letter size ",
                 "values": [
-                    "4X"
+                    "4XL"
                 ],
                 "value_ids": [
                     2151
