@@ -78,6 +78,8 @@
             let tagsText = $(this).parents("tr").find(".item-tags")[0].innerText
             let tags = []
 
+            if (title.length > 140) return alert('Title too long!')
+
             if (tagsText) tags = tagsText.split(",")
             
             let data = {
