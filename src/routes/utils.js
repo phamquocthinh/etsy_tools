@@ -129,15 +129,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "S"
-                ],
-                "value_ids": [
-                    2137
-                ]
-            },
+                "value": "S"            },
             {
                 "property_id": 200,
                 "property_name": "Primary color",
@@ -167,15 +159,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "S"
-                ],
-                "value_ids": [
-                    2137
-                ]
-            },
+                "value": "S"            },
             {
                 "property_id": 200,
                 "property_name": "Primary color",
@@ -205,15 +189,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "S"
-                ],
-                "value_ids": [
-                    2137
-                ]
-            },
+                "value": "S"            },
             {
                 "property_id": 200,
                 "property_name": "Primary color",
@@ -243,15 +219,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "S"
-                ],
-                "value_ids": [
-                    2137
-                ]
-            },
+                "value": "S"            },
             {
                 "property_id": 200,
                 "property_name": "Primary color",
@@ -281,15 +249,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "S"
-                ],
-                "value_ids": [
-                    2137
-                ]
-            },
+                "value": "S"            },
             {
                 "property_id": 200,
                 "property_name": "Primary color",
@@ -319,14 +279,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "M"
-                ],
-                "value_ids": [
-                    2139
-                ]
+                "value": "M"
             },
             {
                 "property_id": 200,
@@ -357,14 +310,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "M"
-                ],
-                "value_ids": [
-                    2139
-                ]
+                "value": "M"
             },
             {
                 "property_id": 200,
@@ -395,14 +341,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "M"
-                ],
-                "value_ids": [
-                    2139
-                ]
+                "value": "M"
             },
             {
                 "property_id": 200,
@@ -433,14 +372,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "M"
-                ],
-                "value_ids": [
-                    2139
-                ]
+                "value": "M"
             },
             {
                 "property_id": 200,
@@ -471,14 +403,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "M"
-                ],
-                "value_ids": [
-                    2139
-                ]
+                "value": "M"
             },
             {
                 "property_id": 200,
@@ -509,14 +434,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "L"
-                ],
-                "value_ids": [
-                    2141
-                ]
+                "value": "L"
             },
             {
                 "property_id": 200,
@@ -547,14 +465,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "L"
-                ],
-                "value_ids": [
-                    2141
-                ]
+                "value": "L"
             },
             {
                 "property_id": 200,
@@ -585,14 +496,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "L"
-                ],
-                "value_ids": [
-                    2141
-                ]
+                "value": "L"
             },
             {
                 "property_id": 200,
@@ -623,14 +527,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "L"
-                ],
-                "value_ids": [
-                    2141
-                ]
+                "value": "L"
             },
             {
                 "property_id": 200,
@@ -661,14 +558,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "L"
-                ],
-                "value_ids": [
-                    2141
-                ]
+                "value": "L"
             },
             {
                 "property_id": 200,
@@ -699,14 +589,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "XL"
-                ],
-                "value_ids": [
-                    2144
-                ]
+                "value": "XL"
             },
             {
                 "property_id": 200,
@@ -737,14 +620,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "XL"
-                ],
-                "value_ids": [
-                    2144
-                ]
+                "value": "XL"
             },
             {
                 "property_id": 200,
@@ -775,14 +651,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "XL"
-                ],
-                "value_ids": [
-                    2144
-                ]
+                "value": "XL"
             },
             {
                 "property_id": 200,
@@ -813,14 +682,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "XL"
-                ],
-                "value_ids": [
-                    2144
-                ]
+                "value": "XL"
             },
             {
                 "property_id": 200,
@@ -851,14 +713,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "XL"
-                ],
-                "value_ids": [
-                    2144
-                ]
+                "value": "XL"
             },
             {
                 "property_id": 200,
@@ -889,14 +744,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "2XL"
-                ],
-                "value_ids": [
-                    2147
-                ]
+                "value": "2XL"
             },
             {
                 "property_id": 200,
@@ -927,14 +775,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "2XL"
-                ],
-                "value_ids": [
-                    2147
-                ]
+                "value": "2XL"
             },
             {
                 "property_id": 200,
@@ -965,14 +806,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "2XL"
-                ],
-                "value_ids": [
-                    2147
-                ]
+                "value": "2XL"
             },
             {
                 "property_id": 200,
@@ -1003,14 +837,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "2XL"
-                ],
-                "value_ids": [
-                    2147
-                ]
+                "value": "2XL"
             },
             {
                 "property_id": 200,
@@ -1041,14 +868,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "2XL"
-                ],
-                "value_ids": [
-                    2147
-                ]
+                "value": "2XL"
             },
             {
                 "property_id": 200,
@@ -1079,14 +899,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "3XL"
-                ],
-                "value_ids": [
-                    2149
-                ]
+                "value": "3XL"
             },
             {
                 "property_id": 200,
@@ -1117,14 +930,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "3XL"
-                ],
-                "value_ids": [
-                    2149
-                ]
+                "value": "3XL"
             },
             {
                 "property_id": 200,
@@ -1155,14 +961,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "3XL"
-                ],
-                "value_ids": [
-                    2149
-                ]
+                "value": "3XL"
             },
             {
                 "property_id": 200,
@@ -1193,14 +992,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "3XL"
-                ],
-                "value_ids": [
-                    2149
-                ]
+                "value": "3XL"
             },
             {
                 "property_id": 200,
@@ -1231,14 +1023,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "3XL"
-                ],
-                "value_ids": [
-                    2149
-                ]
+                "value": "3XL"
             },
             {
                 "property_id": 200,
@@ -1269,14 +1054,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "4XL"
-                ],
-                "value_ids": [
-                    2151
-                ]
+                "value": "4XL"
             },
             {
                 "property_id": 200,
@@ -1307,14 +1085,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "4XL"
-                ],
-                "value_ids": [
-                    2151
-                ]
+                "value": "4XL"
             },
             {
                 "property_id": 200,
@@ -1345,14 +1116,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "4XL"
-                ],
-                "value_ids": [
-                    2151
-                ]
+                "value": "4XL"
             },
             {
                 "property_id": 200,
@@ -1383,14 +1147,7 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
-                "values": [
-                    "4XL"
-                ],
-                "value_ids": [
-                    2151
-                ]
+                "value": "4XL"
             },
             {
                 "property_id": 200,
@@ -1421,14 +1178,162 @@ const generateVariations = (listingId, price) => {
             {
                 "property_id": 62809790533,
                 "property_name": "Size",
-                "scale_id": 51,
-                "scale_name": "Letter size ",
+                "value": "4XL"
+            },
+            {
+                "property_id": 200,
+                "property_name": "Primary color",
+                "scale_id": null,
+                "scale_name": null,
                 "values": [
-                    "4XL"
+                    "Dark Heather"
                 ],
                 "value_ids": [
-                    2151
+                    77069646428
                 ]
+            }
+        ],
+        "offerings": [
+            {
+                "price": price + 2,
+                "quantity": 999,
+                "is_enabled": 1,
+                "is_deleted": 0
+            }
+        ],
+        "is_deleted": 0
+    },
+    {
+        "sku": listingId + "_5x_black",
+        "property_values": [
+            {
+                "property_id": 62809790533,
+                "property_name": "Size",
+                "value": "5XL"
+            },
+            {
+                "property_id": 200,
+                "property_name": "Primary color",
+                "scale_id": null,
+                "scale_name": null,
+                "values": [
+                    "Black"
+                ],
+                "value_ids": [
+                    1
+                ]
+            }
+        ],
+        "offerings": [
+            {
+                "price": price + 2,
+                "quantity": 999,
+                "is_enabled": 1,
+                "is_deleted": 0
+            }
+        ],
+        "is_deleted": 0
+    },
+    {
+        "sku": listingId + "_5x_navy",
+        "property_values": [
+            {
+                "property_id": 62809790533,
+                "property_name": "Size",
+                "value": "5XL"
+            },
+            {
+                "property_id": 200,
+                "property_name": "Primary color",
+                "scale_id": null,
+                "scale_name": null,
+                "values": [
+                    "Navy"
+                ],
+                "value_ids": [
+                    52178634305
+                ]
+            }
+        ],
+        "offerings": [
+            {
+                "price": price + 2,
+                "quantity": 999,
+                "is_enabled": 1,
+                "is_deleted": 0
+            }
+        ],
+        "is_deleted": 0
+    },
+    {
+        "sku": listingId + "_5x_purple",
+        "property_values": [
+            {
+                "property_id": 62809790533,
+                "property_name": "Size",
+                "value": "5XL"
+            },
+            {
+                "property_id": 200,
+                "property_name": "Primary color",
+                "scale_id": null,
+                "scale_name": null,
+                "values": [
+                    "Purple"
+                ],
+                "value_ids": [
+                    8
+                ]
+            }
+        ],
+        "offerings": [
+            {
+                "price": price + 2,
+                "quantity": 999,
+                "is_enabled": 1,
+                "is_deleted": 0
+            }
+        ],
+        "is_deleted": 0
+    },
+    {
+        "sku": listingId + "_5x_royal",
+        "property_values": [
+            {
+                "property_id": 62809790533,
+                "property_name": "Size",
+                "value": "5XL"
+            },
+            {
+                "property_id": 200,
+                "property_name": "Primary color",
+                "scale_id": null,
+                "scale_name": null,
+                "values": [
+                    "Royal"
+                ],
+                "value_ids": [
+                    58354515685
+                ]
+            }
+        ],
+        "offerings": [
+            {
+                "price": price + 2,
+                "quantity": 999,
+                "is_enabled": 1,
+                "is_deleted": 0
+            }
+        ],
+        "is_deleted": 0
+    },
+    {
+        "sku": listingId + "_5x_dark",
+        "property_values": [
+            {
+                "property_id": 62809790533,
+                "property_name": "Size",
+                "value": "5XL"
             },
             {
                 "property_id": 200,
