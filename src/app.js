@@ -12,6 +12,8 @@ import user from './routes/user'
 import token from './routes/token'
 import dashboard from './routes/dashboard'
 import product from './routes/product'
+import image from './routes/image'
+
 let app = express()
 open()
 
@@ -48,6 +50,7 @@ app.use('/', index)
 app.use('/token', token)
 app.use('/dashboard', dashboard)
 app.use('/product', product)
+app.use('/image', image)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

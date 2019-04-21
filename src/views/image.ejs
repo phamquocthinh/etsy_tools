@@ -1,0 +1,30 @@
+<% include header.ejs %>
+<form class="form form-horizontal" role="form" action="/image/upload" enctype="multipart/form-data" method="post">
+    <div class="form-group">
+        <label class="control-label col-sm-2">Select File:</label>
+        <div class="control-label col-sm-10">
+            <input type="file" name="pic-file" multiple />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-10">
+            <button type="submit" class="btn btn-primary btn-lg">Upload</button>
+            <% if(zipName) { %>
+            <a><button file-dir="/images/zip/<%=zipName%>" type="button" class="btnDownload btn btn-primary btn-lg">Download</button></a>
+            <% } %>
+        </div>
+    </div>
+</form>
+<div style="float: left">
+</div>
+
+<script>
+    $(function() {
+        $("button.btnDownload").click(function(e) {
+            let link = $(this).attr("file-dir")
+            window.open(link)
+        })
+    })
+</script>
+
+<% include footer.ejs %>
