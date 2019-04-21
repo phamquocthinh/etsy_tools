@@ -21,7 +21,7 @@ let storage = multer.diskStorage({
     }
 })
 
-let upload = multer({ storage: storage }).array('pic-file', 10)
+let upload = multer({ storage: storage }).array('pic-file', 30)
 
 let image = express.Router()
 
