@@ -10,7 +10,8 @@ import sharp from 'sharp'
 import { 
     SHIPPING_TEMPLATE_ID,
     TAXONOMY_ID,
-    PRICE
+    PRICE,
+    DESCRIPTION
 } from '../config/defaulValues'
 import { getOauth, pushItem, updateImage, updateVariations } from './utils'
 
@@ -80,7 +81,7 @@ product.route('/upload')
                         //let tshirt = await jimp.read(tShirtPath)
                         let image = await jimp.read(imagePath)
 
-                        await image.resize(362, jimp.AUTO)
+                        await image.resize(360, jimp.AUTO)
                         //await tshirt.composite(image, 315, 150)
 
                         let colors = fs.readdirSync(path.join(__dirname, '../public/images/color/'))
@@ -89,7 +90,7 @@ product.route('/upload')
                         for (const color of colors) {
                             let colorPath = path.join(__dirname, '../public/images/color/' + color)
                             let colorFile = await jimp.read(colorPath)
-                            await colorFile.composite(image, 320, 250)
+                            await colorFile.composite(image, 300, 187)
                             await colorFile.write(path.join(__dirname, '../public/images/products/' + file.filename + '/' + color))
                         }
                     } catch(e) {
@@ -135,7 +136,7 @@ product.route('/:id/push')
         let data = {
             quantity: 999,
             title: item.title,
-            description: item.description,
+            description: `${item.title}\n${DESCRIPTION}`,
             price: PRICE,
             who_made: 'i_did',
             is_supply: false,
