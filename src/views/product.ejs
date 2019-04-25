@@ -49,7 +49,7 @@
                 <td class="item-tags" contenteditable="true"><%= item.tags.join() %></td>
                 <td>
                     <a><button data-id="<%=item._id %>" type="button" class="btnSave btn btn-info btn-sm">Save</button></a>
-                    <% if((item.title && item.description) && !item.pushedToEtsy) { %>
+                    <% if(item.title && !item.pushedToEtsy) { %>
                         <a><button data-id="<%=item._id %>" type="button" class="btnPush btn btn-info btn-sm">Push</button></a>
                     <% } %>
                 </td>
