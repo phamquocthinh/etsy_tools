@@ -30,10 +30,10 @@
                         title
                     </th>
                     <th width="20%">
-                        description
+                        tags
                     </th>
                     <th width="15%">
-                        tags
+                        status
                     </th>
                     <th width="10%">
                         action
@@ -45,11 +45,11 @@
                 <td ><%= item.name %></td>
                 <td><img style="max-height: 200px" src="<%= item.dir %>"></img></td>
                 <td class="item-title" contenteditable="true"><%= item.title %></td>
-                <!-- <td class="item-des" contenteditable="true"><%= item.description %></td> -->
                 <td class="item-tags" contenteditable="true"><%= item.tags.join() %></td>
+                <td class="item-status" contenteditable="true"><%= item.pushedToEtsy ? item.status : 'Non-Pushed' %></td>
                 <td>
                     <a><button data-id="<%=item._id %>" type="button" class="btnSave btn btn-info btn-sm">Save</button></a>
-                    <% if((item.title && item.description) && !item.pushedToEtsy) { %>
+                    <% if(!item.pushedToEtsy) { %>
                         <a><button data-id="<%=item._id %>" type="button" class="btnPush btn btn-info btn-sm">Push</button></a>
                     <% } %>
                 </td>

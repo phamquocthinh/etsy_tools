@@ -14,7 +14,9 @@ const schema = new mongoose.Schema({
     createdAt: Date,
     title: String,
     description: String,
-    tags: Array
+    tags: Array,
+    status: String,
+    error: mongoose.Schema.Types.Mixed
 }, { collection: 'product' });
 
 export default mongoose.model('product', schema);

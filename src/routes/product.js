@@ -1,19 +1,10 @@
-import Promise from 'bluebird'
+
 import express from 'express'
 import Product from '../models/product'
 import multer from 'multer'
 import path from 'path'
-import jimp from 'jimp'
-import fs from 'fs'
-import sharp from 'sharp'
 
-import { 
-    SHIPPING_TEMPLATE_ID,
-    TAXONOMY_ID,
-    PRICE,
-    DESCRIPTION
-} from '../config/defaulValues'
-import { getOauth, pushItem, updateImage, updateVariations } from './utils'
+import { createMockup, processItem } from '../controller/product'
 
 let storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -30,7 +21,7 @@ let storage = multer.diskStorage({
     }
 })
 
-let upload = multer({ storage: storage }).array('pic-file', 10)
+let upload = multer({ storage: storage }).array('pic-file', 30) 
 
 let product = express.Router()
 
@@ -59,7 +50,7 @@ product.route('/upload')
         res.render('product', { items: items })
     })
     .post(async(req, res) => {
-        upload(req, res, (err) => {
+        upload(req, res, async(err) => {
             if (err) {
                 console.log('ERROR: ', err)
                 return res.json(JSON.stringify(err))
@@ -69,46 +60,12 @@ product.route('/upload')
                 return res.redirect('/product')
             }
 
-            return Promise.each(req.files, file => {
-                return Product.create({
-                    name: file.filename,
-                    dir: '/images/uploads/' + file.filename,
-                    createdAt: new Date()
-                }).then(async() => {
-                    try {
-                        //let tShirtPath = path.join(__dirname, '../public/images/shirts/tee-front.png')
-                        let imagePath = path.join(__dirname, '../public/images/uploads/' + file.filename)
-                        //let tshirt = await jimp.read(tShirtPath)
-                        let image = await jimp.read(imagePath)
-
-                        await image.resize(360, jimp.AUTO)
-                        //await tshirt.composite(image, 315, 150)
-
-                        let colors = fs.readdirSync(path.join(__dirname, '../public/images/color/'))
-                        fs.mkdirSync(path.join(__dirname, '../public/images/products/' + file.filename))
-
-                        for (const color of colors) {
-                            let colorPath = path.join(__dirname, '../public/images/color/' + color)
-                            let colorFile = await jimp.read(colorPath)
-                            await colorFile.composite(image, 300, 187)
-                            await colorFile.write(path.join(__dirname, '../public/images/products/' + file.filename + '/' + color))
-                        }
-                    } catch(e) {
-                        console.log('ERROR:', e)
-                    }
-                    
-                }).catch((e) => {
-                    console.log('ERROR:', e)
-                    res.json({ 'message': 'File uploaded error' })
-                })
-            })
-            .then(() => {
+            try {
+                await createMockup(req.files)
                 return res.redirect('/product')
-            })
-            .catch(e => {
-                console.log(e)
-            })
-            
+            } catch (e) {
+                console.log(e.stack)
+            }
         })
     })
 
@@ -133,39 +90,8 @@ product.route('/:id/push')
 
         if (!item) return res.json({'message': `Not found product id ${id}`})
 
-        let data = {
-            quantity: 999,
-            title: item.title,
-            description: `${item.title}\n${DESCRIPTION}`,
-            price: PRICE,
-            who_made: 'i_did',
-            is_supply: false,
-            when_made: 'made_to_order',
-            shipping_template_id: SHIPPING_TEMPLATE_ID,
-            tags: item.tags.join(','),
-            state: 'draft',
-            taxonomy_id: TAXONOMY_ID
-        }
-
         try {
-            let oauth = getOauth(req)
-            let listingId = await pushItem(oauth, data)
-
-            let sizes = fs.readdirSync(path.join(__dirname, '../public/images/size/'))
-
-            for (const size of sizes) {
-                let sizePath = path.join(__dirname, '../public/images/size/' + size)
-                await updateImage(oauth, listingId, sizePath)
-            }
-
-            let files = fs.readdirSync(path.join(__dirname, '../public/images/products/' + item.name + '/'))
-
-            for (const file of files) {
-                let filePath = path.join(__dirname, '../public/images/products/' + item.name + '/' + file)
-                await updateImage(oauth, listingId, filePath)
-            }
-            await updateVariations(oauth, listingId, data.price)
-            await Product.findByIdAndUpdate(id, { pushedToEtsy: 1 })
+            await processItem(item)
             return res.json({'message': 'success'})
         } catch(e) {
             console.log(e)
