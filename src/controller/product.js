@@ -210,7 +210,7 @@ const processItem = async(item) => {
             await updateImage(oauth, listingId, filePath)
         }
         await updateVariations(oauth, listingId, data.price)
-        await Product.findByIdAndUpdate(id, { pushedToEtsy: 1 })
+        await Product.findByIdAndUpdate(item.id, { pushedToEtsy: 1, status: 'success' })
     } catch(e) {
         throw e
     }
