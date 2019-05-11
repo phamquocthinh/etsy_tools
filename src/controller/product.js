@@ -173,7 +173,7 @@ const updateVariations = (oauth, id, price) => {
     })
 }
 
-const processItem = async() => {
+const processItem = async(item) => {
     try {
         let data = {
             quantity: 999,
