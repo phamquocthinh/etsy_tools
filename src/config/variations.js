@@ -694,7 +694,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -721,7 +721,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -748,7 +748,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -775,7 +775,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -802,7 +802,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -829,7 +829,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -856,7 +856,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -883,7 +883,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -910,7 +910,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -937,7 +937,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -964,7 +964,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -991,7 +991,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1018,7 +1018,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1045,7 +1045,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1072,7 +1072,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 3,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
