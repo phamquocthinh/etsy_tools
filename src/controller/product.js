@@ -12,7 +12,8 @@ import {
     TOKEN_SECRET,
     DESCRIPTION,
     SHIPPING_TEMPLATE_ID,
-    TAXONOMY_ID
+    TAXONOMY_ID,
+    PRICE
 } from '../config/defaulValues'
 import { getVariations } from '../config/variations'
 import Product from '../models/product'
