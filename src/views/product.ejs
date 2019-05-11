@@ -74,7 +74,7 @@
             e.preventDefault();
             let id = $(this).attr("data-id");
             let title = $(this).parents("tr").find(".item-title")[0].innerText
-            let description = $(this).parents("tr").find(".item-des")[0].innerText
+            // let description = $(this).parents("tr").find(".item-des")[0].innerText
             let tagsText = $(this).parents("tr").find(".item-tags")[0].innerText
             let tags = []
 
@@ -83,7 +83,7 @@
             if (tagsText) tags = tagsText.split(",")
             
             let data = {
-                title,description,tags
+                title,tags
             }
 
             if (confirm(`Confirm save?`)) {
