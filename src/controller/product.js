@@ -9,7 +9,10 @@ import {
     CONSUMER_KEY,
     CONSUMER_SECRET,
     TOKEN,
-    TOKEN_SECRET
+    TOKEN_SECRET,
+    DESCRIPTION,
+    SHIPPING_TEMPLATE_ID,
+    TAXONOMY_ID
 } from '../config/defaulValues'
 import { getVariations } from '../config/variations'
 import Product from '../models/product'
