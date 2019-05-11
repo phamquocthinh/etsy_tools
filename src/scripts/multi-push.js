@@ -18,7 +18,7 @@ const execute = async() => {
     }
 
     try {
-        //await processItem(item)
+        await processItem(item)
         console.log('Update item status')
         await Product.findByIdAndUpdate(item.id, { pushedToEtsy: 1, status: 'success' })
     } catch(e) {
