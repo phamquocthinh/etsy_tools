@@ -673,7 +673,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_s_dark_heather t-shirt"
+            sku: listingId + "_s_dark_t-shirt"
         },
         {
             property_values: [
@@ -700,7 +700,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_m_dark_heather t-shirt"
+            sku: listingId + "_m_dark_t-shirt"
         },
         {
             property_values: [
@@ -727,7 +727,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_l_dark_heather t-shirt"
+            sku: listingId + "_l_dark_t-shirt"
         },
         {
             property_values: [
@@ -754,7 +754,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_xl_dark_heather t-shirt"
+            sku: listingId + "_xl_dark_t-shirt"
         },
         {
             property_values: [
@@ -781,7 +781,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_2xl_dark_heather t-shirt"
+            sku: listingId + "_2xl_dark_t-shirt"
         },
         {
             property_values: [
@@ -808,7 +808,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_3xl_dark_heather t-shirt"
+            sku: listingId + "_3xl_dark_t-shirt"
         },
         {
             property_values: [
@@ -835,7 +835,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_4xl_dark_heather t-shirt"
+            sku: listingId + "_4xl_dark_t-shirt"
         },
         {
             property_values: [
@@ -862,7 +862,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_5xl_dark_heather t-shirt"
+            sku: listingId + "_5xl_dark_t-shirt"
         },
         {
             property_values: [
@@ -1753,7 +1753,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_s_dark_heather hoodie"
+            sku: listingId + "_s_dark_hoodie"
         },
         {
             property_values: [
@@ -1780,7 +1780,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_m_dark_heather hoodie"
+            sku: listingId + "_m_dark_hoodie"
         },
         {
             property_values: [
@@ -1807,7 +1807,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_l_dark_heather hoodie"
+            sku: listingId + "_l_dark_hoodie"
         },
         {
             property_values: [
@@ -1834,7 +1834,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_xl_dark_heather hoodie"
+            sku: listingId + "_xl_dark_hoodie"
         },
         {
             property_values: [
@@ -1861,7 +1861,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_2xl_dark_heather hoodie"
+            sku: listingId + "_2xl_dark_hoodie"
         },
         {
             property_values: [
@@ -1888,7 +1888,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_3xl_dark_heather hoodie"
+            sku: listingId + "_3xl_dark_hoodie"
         },
         {
             property_values: [
@@ -1915,7 +1915,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_4xl_dark_heather hoodie"
+            sku: listingId + "_4xl_dark_hoodie"
         },
         {
             property_values: [
@@ -1942,7 +1942,7 @@ const getVariations = (listingId, price) => {
                 }
             ],
             is_deleted: 0,
-            sku: listingId + "_5xl_dark_heather hoodie"
+            sku: listingId + "_5xl_dark_hoodie"
         },
         {
             property_values: [
