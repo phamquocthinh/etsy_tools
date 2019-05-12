@@ -1098,7 +1098,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1125,7 +1125,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1152,7 +1152,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1179,7 +1179,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 19,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1206,7 +1206,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 19,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1233,7 +1233,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 3,
+                    price: price + 20,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1260,7 +1260,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 3,
+                    price: price + 20,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1287,7 +1287,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 4,
+                    price: price + 21,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1314,7 +1314,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1341,7 +1341,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1368,7 +1368,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1395,7 +1395,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 19,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1422,7 +1422,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 19,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1449,7 +1449,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 3,
+                    price: price + 20,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1476,7 +1476,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 3,
+                    price: price + 20,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1503,7 +1503,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 4,
+                    price: price + 21,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1530,7 +1530,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1557,7 +1557,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1584,7 +1584,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1611,7 +1611,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 19,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1638,7 +1638,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 19,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1665,7 +1665,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 3,
+                    price: price + 20,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1692,7 +1692,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 3,
+                    price: price + 20,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1719,7 +1719,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 4,
+                    price: price + 21,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1746,7 +1746,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1773,7 +1773,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1800,7 +1800,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1827,7 +1827,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 19,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1854,7 +1854,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 19,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1881,7 +1881,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 3,
+                    price: price + 20,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1908,7 +1908,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 3,
+                    price: price + 20,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1935,7 +1935,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 4,
+                    price: price + 21,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1962,7 +1962,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -1989,7 +1989,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -2016,7 +2016,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price,
+                    price: price + 17,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -2043,7 +2043,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 19,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -2070,7 +2070,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 2,
+                    price: price + 19,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -2097,7 +2097,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 3,
+                    price: price + 20,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -2124,7 +2124,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 3,
+                    price: price + 20,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
@@ -2151,7 +2151,7 @@ const getVariations = (listingId, price) => {
             ],
             offerings: [
                 {
-                    price: price + 4,
+                    price: price + 21,
                     quantity: 999,
                     is_enabled: 1,
                     is_deleted: 0
