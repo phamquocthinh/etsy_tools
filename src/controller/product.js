@@ -57,6 +57,12 @@ const createMockup = async(files) => {
                     await colorFile.write(path.join(__dirname, '../public/images/products/' + file.filename + '/' + color))
                 }
             }
+
+            let hoodiePath = path.join(__dirname, '../public/images/shirts/hoodie.jpg')
+            let hoodieFile = await jimp.read(hoodiePath)
+            await hoodieFile.composite(image, 666, 666)
+            await hoodieFile.write(path.join(__dirname, '../public/images/products/' + file.filename + '/hoodie.jpg'))
+        
         }
     } catch(e) {
         console.log(e.stack)
