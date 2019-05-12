@@ -11,12 +11,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [114286038018]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["S"],
-                    value_ids: [54657375794]
+                    value: "S"
                 }
             ],
             offerings: [
@@ -41,12 +38,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [114286038018]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["M"],
-                    value_ids: [56802856687]
+                    value: "M"
                 }
             ],
             offerings: [
@@ -71,12 +65,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [114286038018]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["L"],
-                    value_ids: [54657375590]
+                    value: "L"
                 }
             ],
             offerings: [
@@ -101,12 +92,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [114286038018]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["XL"],
-                    value_ids: [71931465715]
+                    value: "XL"
                 }
             ],
             offerings: [
@@ -131,12 +119,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [114286038018]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["2XL"],
-                    value_ids: [91416890176]
+                    value: "2XL"
                 }
             ],
             offerings: [
@@ -161,12 +146,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [114286038018]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["3XL"],
-                    value_ids: [94172869301]
+                    value: "3XL"
                 }
             ],
             offerings: [
@@ -191,12 +173,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [114286038018]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["4XL"],
-                    value_ids: [100379131681]
+                    value: "4XL"
                 }
             ],
             offerings: [
@@ -221,12 +200,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [114286038018]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["5XL"],
-                    value_ids: [109159613889]
+                    value: "5XL"
                 }
             ],
             offerings: [
@@ -251,12 +227,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [119302830021]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["S"],
-                    value_ids: [54657375794]
+                    value: "S"
                 }
             ],
             offerings: [
@@ -281,12 +254,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [119302830021]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["M"],
-                    value_ids: [56802856687]
+                    value: "M"
                 }
             ],
             offerings: [
@@ -311,12 +281,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [119302830021]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["L"],
-                    value_ids: [54657375590]
+                    value: "L"
                 }
             ],
             offerings: [
@@ -341,12 +308,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [119302830021]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["XL"],
-                    value_ids: [71931465715]
+                    value: "XL"
                 }
             ],
             offerings: [
@@ -371,12 +335,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [119302830021]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["2XL"],
-                    value_ids: [91416890176]
+                    value: "2XL"
                 }
             ],
             offerings: [
@@ -401,12 +362,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [119302830021]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["3XL"],
-                    value_ids: [94172869301]
+                    value: "3XL"
                 }
             ],
             offerings: [
@@ -431,12 +389,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [119302830021]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["4XL"],
-                    value_ids: [100379131681]
+                    value: "4XL"
                 }
             ],
             offerings: [
@@ -461,12 +416,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [119302830021]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["5XL"],
-                    value_ids: [109159613889]
+                    value: "5XL"
                 }
             ],
             offerings: [
@@ -491,12 +443,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [118714691254]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["S"],
-                    value_ids: [54657375794]
+                    value: "S"
                 }
             ],
             offerings: [
@@ -521,12 +470,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [118714691254]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["M"],
-                    value_ids: [56802856687]
+                    value: "M"
                 }
             ],
             offerings: [
@@ -551,12 +497,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [118714691254]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["L"],
-                    value_ids: [54657375590]
+                    value: "L"
                 }
             ],
             offerings: [
@@ -581,12 +524,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [118714691254]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["XL"],
-                    value_ids: [71931465715]
+                    value: "XL"
                 }
             ],
             offerings: [
@@ -611,12 +551,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [118714691254]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["2XL"],
-                    value_ids: [91416890176]
+                    value: "2XL"
                 }
             ],
             offerings: [
@@ -641,12 +578,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [118714691254]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["3XL"],
-                    value_ids: [94172869301]
+                    value: "3XL"
                 }
             ],
             offerings: [
@@ -671,12 +605,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [118714691254]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["4XL"],
-                    value_ids: [100379131681]
+                    value: "4XL"
                 }
             ],
             offerings: [
@@ -701,12 +632,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [118714691254]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["5XL"],
-                    value_ids: [109159613889]
+                    value: "5XL"
                 }
             ],
             offerings: [
@@ -731,12 +659,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [529198170324]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["S"],
-                    value_ids: [54657375794]
+                    value: "S"
                 }
             ],
             offerings: [
@@ -761,12 +686,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [529198170324]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["M"],
-                    value_ids: [56802856687]
+                    value: "M"
                 }
             ],
             offerings: [
@@ -791,12 +713,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [529198170324]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["L"],
-                    value_ids: [54657375590]
+                    value: "L"
                 }
             ],
             offerings: [
@@ -821,12 +740,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [529198170324]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["XL"],
-                    value_ids: [71931465715]
+                    value: "XL"
                 }
             ],
             offerings: [
@@ -851,12 +767,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [529198170324]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["2XL"],
-                    value_ids: [91416890176]
+                    value: "2XL"
                 }
             ],
             offerings: [
@@ -881,12 +794,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [529198170324]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["3XL"],
-                    value_ids: [94172869301]
+                    value: "3XL"
                 }
             ],
             offerings: [
@@ -911,12 +821,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [529198170324]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["4XL"],
-                    value_ids: [100379131681]
+                    value: "4XL"
                 }
             ],
             offerings: [
@@ -941,12 +848,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [529198170324]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["5XL"],
-                    value_ids: [109159613889]
+                    value: "5XL"
                 }
             ],
             offerings: [
@@ -971,12 +875,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [150355367144]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["S"],
-                    value_ids: [54657375794]
+                    value: "S"
                 }
             ],
             offerings: [
@@ -1001,12 +902,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [150355367144]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["M"],
-                    value_ids: [56802856687]
+                    value: "M"
                 }
             ],
             offerings: [
@@ -1031,12 +929,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [150355367144]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["L"],
-                    value_ids: [54657375590]
+                    value: "L"
                 }
             ],
             offerings: [
@@ -1061,12 +956,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [150355367144]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["XL"],
-                    value_ids: [71931465715]
+                    value: "XL"
                 }
             ],
             offerings: [
@@ -1091,12 +983,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [150355367144]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["2XL"],
-                    value_ids: [91416890176]
+                    value: "2XL"
                 }
             ],
             offerings: [
@@ -1121,12 +1010,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [150355367144]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["3XL"],
-                    value_ids: [94172869301]
+                    value: "3XL"
                 }
             ],
             offerings: [
@@ -1151,12 +1037,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [150355367144]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["4XL"],
-                    value_ids: [100379131681]
+                    value: "4XL"
                 }
             ],
             offerings: [
@@ -1181,12 +1064,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [150355367144]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["5XL"],
-                    value_ids: [109159613889]
+                    value: "5XL"
                 }
             ],
             offerings: [
@@ -1211,12 +1091,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517926]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["S"],
-                    value_ids: [54657375794]
+                    value: "S"
                 }
             ],
             offerings: [
@@ -1241,12 +1118,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517926]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["M"],
-                    value_ids: [56802856687]
+                    value: "M"
                 }
             ],
             offerings: [
@@ -1271,12 +1145,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517926]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["L"],
-                    value_ids: [54657375590]
+                    value: "L"
                 }
             ],
             offerings: [
@@ -1301,12 +1172,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517926]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["XL"],
-                    value_ids: [71931465715]
+                    value: "XL"
                 }
             ],
             offerings: [
@@ -1331,12 +1199,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517926]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["2XL"],
-                    value_ids: [91416890176]
+                    value: "2XL"
                 }
             ],
             offerings: [
@@ -1361,12 +1226,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517926]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["3XL"],
-                    value_ids: [94172869301]
+                    value: "3XL"
                 }
             ],
             offerings: [
@@ -1391,12 +1253,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517926]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["4XL"],
-                    value_ids: [100379131681]
+                    value: "4XL"
                 }
             ],
             offerings: [
@@ -1421,12 +1280,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517926]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["5XL"],
-                    value_ids: [109159613889]
+                    value: "5XL"
                 }
             ],
             offerings: [
@@ -1451,12 +1307,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517972]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["S"],
-                    value_ids: [54657375794]
+                    value: "S"
                 }
             ],
             offerings: [
@@ -1481,12 +1334,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517972]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["M"],
-                    value_ids: [56802856687]
+                    value: "M"
                 }
             ],
             offerings: [
@@ -1511,12 +1361,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517972]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["L"],
-                    value_ids: [54657375590]
+                    value: "L"
                 }
             ],
             offerings: [
@@ -1541,12 +1388,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517972]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["XL"],
-                    value_ids: [71931465715]
+                    value: "XL"
                 }
             ],
             offerings: [
@@ -1571,12 +1415,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517972]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["2XL"],
-                    value_ids: [91416890176]
+                    value: "2XL"
                 }
             ],
             offerings: [
@@ -1601,12 +1442,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517972]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["3XL"],
-                    value_ids: [94172869301]
+                    value: "3XL"
                 }
             ],
             offerings: [
@@ -1631,12 +1469,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517972]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["4XL"],
-                    value_ids: [100379131681]
+                    value: "4XL"
                 }
             ],
             offerings: [
@@ -1661,12 +1496,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [111573517972]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["5XL"],
-                    value_ids: [109159613889]
+                    value: "5XL"
                 }
             ],
             offerings: [
@@ -1691,12 +1523,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [176723608644]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["S"],
-                    value_ids: [54657375794]
+                    value: "S"
                 }
             ],
             offerings: [
@@ -1721,12 +1550,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [176723608644]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["M"],
-                    value_ids: [56802856687]
+                    value: "M"
                 }
             ],
             offerings: [
@@ -1751,12 +1577,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [176723608644]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["L"],
-                    value_ids: [54657375590]
+                    value: "L"
                 }
             ],
             offerings: [
@@ -1781,12 +1604,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [176723608644]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["XL"],
-                    value_ids: [71931465715]
+                    value: "XL"
                 }
             ],
             offerings: [
@@ -1811,12 +1631,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [176723608644]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["2XL"],
-                    value_ids: [91416890176]
+                    value: "2XL"
                 }
             ],
             offerings: [
@@ -1841,12 +1658,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [176723608644]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["3XL"],
-                    value_ids: [94172869301]
+                    value: "3XL"
                 }
             ],
             offerings: [
@@ -1871,12 +1685,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [176723608644]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["4XL"],
-                    value_ids: [100379131681]
+                    value: "4XL"
                 }
             ],
             offerings: [
@@ -1901,12 +1712,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [176723608644]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["5XL"],
-                    value_ids: [109159613889]
+                    value: "5XL"
                 }
             ],
             offerings: [
@@ -1931,12 +1739,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [147159173865]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["S"],
-                    value_ids: [54657375794]
+                    value: "S"
                 }
             ],
             offerings: [
@@ -1961,12 +1766,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [147159173865]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["M"],
-                    value_ids: [56802856687]
+                    value: "M"
                 }
             ],
             offerings: [
@@ -1991,12 +1793,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [147159173865]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["L"],
-                    value_ids: [54657375590]
+                    value: "L"
                 }
             ],
             offerings: [
@@ -2021,12 +1820,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [147159173865]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["XL"],
-                    value_ids: [71931465715]
+                    value: "XL"
                 }
             ],
             offerings: [
@@ -2051,12 +1847,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [147159173865]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["2XL"],
-                    value_ids: [91416890176]
+                    value: "2XL"
                 }
             ],
             offerings: [
@@ -2081,12 +1874,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [147159173865]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["3XL"],
-                    value_ids: [94172869301]
+                    value: "3XL"
                 }
             ],
             offerings: [
@@ -2111,12 +1901,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [147159173865]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["4XL"],
-                    value_ids: [100379131681]
+                    value: "4XL"
                 }
             ],
             offerings: [
@@ -2141,12 +1928,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [147159173865]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["5XL"],
-                    value_ids: [109159613889]
+                    value: "5XL"
                 }
             ],
             offerings: [
@@ -2171,12 +1955,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [113437819834]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["S"],
-                    value_ids: [54657375794]
+                    value: "S"
                 }
             ],
             offerings: [
@@ -2201,12 +1982,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [113437819834]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["M"],
-                    value_ids: [56802856687]
+                    value: "M"
                 }
             ],
             offerings: [
@@ -2231,12 +2009,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [113437819834]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["L"],
-                    value_ids: [54657375590]
+                    value: "L"
                 }
             ],
             offerings: [
@@ -2261,12 +2036,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [113437819834]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["XL"],
-                    value_ids: [71931465715]
+                    value: "XL"
                 }
             ],
             offerings: [
@@ -2291,12 +2063,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [113437819834]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["2XL"],
-                    value_ids: [91416890176]
+                    value: "2XL"
                 }
             ],
             offerings: [
@@ -2321,12 +2090,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [113437819834]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["3XL"],
-                    value_ids: [94172869301]
+                    value: "3XL"
                 }
             ],
             offerings: [
@@ -2351,12 +2117,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [113437819834]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["4XL"],
-                    value_ids: [100379131681]
+                    value: "4XL"
                 }
             ],
             offerings: [
@@ -2381,12 +2144,9 @@ const getVariations = (listingId, price) => {
                     value_ids: [113437819834]
                 },
                 {
-                    property_id: 514,
+                    property_id: 62809790533,
                     property_name: "Size",
-                    scale_id: null,
-                    scale_name: null,
-                    values: ["5XL"],
-                    value_ids: [109159613889]
+                    value: "5XL"
                 }
             ],
             offerings: [
