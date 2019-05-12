@@ -61,7 +61,7 @@ const createMockup = async(files) => {
             let hoodiePath = path.join(__dirname, '../public/images/shirts/hoodie.jpg')
             let hoodieFile = await jimp.read(hoodiePath)
             await hoodieFile.composite(image, 666, 666)
-            await hoodieFile.write(path.join(__dirname, '../public/images/products/' + file.filename + '/hoodie.jpg'))
+            await hoodieFile.write(path.join(__dirname, '../public/images/products/' + file.filename + '/0hoodie.jpg'))
         
         }
     } catch(e) {
