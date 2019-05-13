@@ -43,11 +43,17 @@ const createMockup = async(files) => {
             //let tshirt = await jimp.read(tShirtPath)
             let image = await jimp.read(imagePath)
             
-            await image.resize(360, jimp.AUTO)
+            await image.resize(520, jimp.AUTO)
+            let hoodiePath = path.join(__dirname, '../public/images/shirts/hoodie.jpg')
+            let hoodieFile = await jimp.read(hoodiePath)
+            await hoodieFile.composite(image, 620, 690)
+            await hoodieFile.write(path.join(__dirname, '../public/images/products/' + file.filename + '/0hoodie.jpg'))
             //await tshirt.composite(image, 315, 150)
     
             let colors = fs.readdirSync(path.join(__dirname, '../public/images/color/'))
             fs.mkdirSync(path.join(__dirname, '../public/images/products/' + file.filename))
+
+            await image.resize(360, jimp.AUTO)
     
             for (const color of colors) {
                 if (color.endsWith('.jpg')) {
@@ -58,10 +64,7 @@ const createMockup = async(files) => {
                 }
             }
 
-            let hoodiePath = path.join(__dirname, '../public/images/shirts/hoodie.jpg')
-            let hoodieFile = await jimp.read(hoodiePath)
-            await hoodieFile.composite(image, 666, 666)
-            await hoodieFile.write(path.join(__dirname, '../public/images/products/' + file.filename + '/0hoodie.jpg'))
+            
         
         }
     } catch(e) {
