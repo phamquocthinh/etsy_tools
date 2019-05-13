@@ -43,29 +43,25 @@ const createMockup = async(files) => {
             //let tshirt = await jimp.read(tShirtPath)
             let image = await jimp.read(imagePath)
             
-            await image.resize(520, jimp.AUTO)
-            let hoodiePath = path.join(__dirname, '../public/images/shirts/hoodie.jpg')
-            let hoodieFile = await jimp.read(hoodiePath)
-            await hoodieFile.composite(image, 620, 690)
-            await hoodieFile.write(path.join(__dirname, '../public/images/products/' + file.filename + '/0hoodie.jpg'))
-            //await tshirt.composite(image, 315, 150)
-    
+            let imageResizeForT = await image.resize(360, jimp.AUTO)
+            
             let colors = fs.readdirSync(path.join(__dirname, '../public/images/color/'))
             fs.mkdirSync(path.join(__dirname, '../public/images/products/' + file.filename))
-
-            await image.resize(360, jimp.AUTO)
     
             for (const color of colors) {
                 if (color.endsWith('.jpg')) {
                     let colorPath = path.join(__dirname, '../public/images/color/' + color)
                     let colorFile = await jimp.read(colorPath)
-                    await colorFile.composite(image, 300, 187)
+                    await colorFile.composite(imageResizeForT, 300, 187)
                     await colorFile.write(path.join(__dirname, '../public/images/products/' + file.filename + '/' + color))
                 }
             }
 
-            
-        
+            let imageResizeForH = await image.resize(400, jimp.AUTO)
+            let hoodiePath = path.join(__dirname, '../public/images/shirts/hoodie.jpg')
+            let hoodieFile = await jimp.read(hoodiePath)
+            await hoodieFile.composite(imageResizeForH, 621, 656)
+            await hoodieFile.write(path.join(__dirname, '../public/images/products/' + file.filename + '/0hoodie.jpg'))
         }
     } catch(e) {
         console.log(e.stack)
@@ -74,16 +70,6 @@ const createMockup = async(files) => {
 }
 
 const getOauth = () => {
-    // let token = req.session.oauth.access_token
-    // let secret = req.session.oauth.access_token_secret
-
-    // let oauth = {
-    //     consumer_key: "0knnnx78v7lgld0vs633ktut",
-    //     consumer_secret: "t009aeebvl",
-    //     token: token,
-    //     token_secret: secret
-    // }
-
     let oauth = {
         consumer_key: CONSUMER_KEY,
         consumer_secret: CONSUMER_SECRET,
