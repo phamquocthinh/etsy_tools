@@ -1,0 +1,47 @@
+<% include header.ejs %>
+<div class="container">
+    <div class="row justify-content">
+        <div class="col-12">
+            <form class="form form-horizontal" role="form" action="/item/upload" enctype="multipart/form-data" method="post">
+                <div class="form-group">
+                    <label class="control-label col-12">Select File:</label>
+                    <div class="control-label col-12">
+                        <input type="file" name="pic-file" multiple />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-12" for="accountSelect">Account</label>
+                    <select class="custom-select col-sm-12" id="accountSelect" name="accountId">
+                        <option selected>Choose...</option>
+                        <% for(a of data.accounts) { %>
+                        <option value="<%=a._id%>"><%=a.name%></option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-12" for="keywordSelect">Keyword</label>
+                    <select class="custom-select col-sm-12" id="keywordSelect" name="keywordId">
+                        <option selected>Choose...</option>
+                        <% for(k of data.keywords) { %>
+                        <option value="<%=k._id%>"><%=k.name%></option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-12" for="mockupSelect">Mockup</label>
+                    <select class="custom-select col-sm-12" id="mockupSelect" name="mockupId">
+                        <option selected>Choose...</option>
+                        <% for(m of data.mockups) { %>
+                        <option value="<%=m._id%>"><%=m.name%></option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-10">
+                        <button type="submit" class="btn btn-primary btn-lg">Upload</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>  

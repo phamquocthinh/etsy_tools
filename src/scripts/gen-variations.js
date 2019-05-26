@@ -3532,14 +3532,27 @@ const gen = (b) => {
             default:
                 break
         }
+        a.property_values[1].value = a.property_values[1].values[0]
+        a.property_values[1].property_id = 62809790533
+        a.property_values[1].property_name = "Size"
 
+        delete a.property_values[1].scale_id
+        delete a.property_values[1].scale_name
+        delete a.property_values[1].values
+        delete a.property_values[1].value_ids
         a.is_deleted = 0
-        a.sku = '{{listingId}}' + `_${a.property_values[1].values[0].toLowerCase()}_${a.property_values[0].values[0].replace(' ', '_').toLowerCase()}`
+
+        if (a.property_values[0].values[0].indexOf('Hoodie') > -1) {
+            a.offerings[0].price += 'h'
+        }
+
+        a.sku = '{{listingId}}' + `_${a.property_values[1].value.toLowerCase()}_${a.property_values[0].values[0].replace('Heather ', '').replace(' ', '_').toLowerCase()}`
         
     })
     
 
     fs.writeFileSync('./variations.txt', JSON.stringify(b), 'utf8')
 }
+
 
 gen(b)

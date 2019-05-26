@@ -24,7 +24,7 @@ user.route("/login")
         }
         if (req.body.user_name === account.name && req.body.password === account.password) {
             sess.USER = req.body.user_name
-            res.redirect("/product")
+            res.redirect("/item")
         } else {
             res.render("index", {
                 message: "No User Found"
