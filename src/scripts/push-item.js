@@ -5,8 +5,11 @@ import { processItem, sleep } from './libs/utils'
 
 const execute = async() => {
     let item = await getItem()
-    console.log(item)
-    if (!item) process.exit()
+
+    if (!item) {
+        await sleep(60000)
+        return process.exit()
+    }
 
     try {
         await processItem(item)
@@ -18,7 +21,8 @@ const execute = async() => {
         await Items.findByIdAndUpdate(item._id, { pushedToEtsy: 2, status: 'error', error: e })
     }
     
-    await sleep(10000)
+    console.log('Done')
+    await sleep(60000)
     process.exit()
 }
 

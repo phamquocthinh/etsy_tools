@@ -6,7 +6,10 @@ import { createMockup, sleep } from './libs/utils'
 const execute = async() => {
     let item = await getItem()
     
-    if (!item) process.exit()
+    if (!item) {
+        await sleep(60000)
+        return process.exit()
+    }
 
     try {
         await createMockup(item)
@@ -18,7 +21,7 @@ const execute = async() => {
     }
     
     console.log('Done')
-    await sleep(10000)
+    await sleep(60000)
     process.exit()
 }
 
