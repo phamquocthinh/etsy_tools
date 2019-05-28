@@ -72,10 +72,10 @@
                 <tr>
                     <td ><%= item.name %></td>
                     <td><img style="max-height: 200px" src="<%= item.dir %>"></img></td>
-                    <td class="item-title" contenteditable="true"><%= item.keywords[0].keywords.join(',') %></td>
-                    <td class="item-tags" contenteditable="true"><%= item.account.name %></td>
-                    <td class="item-status" contenteditable="true"><%= item.mockup.name %></td>
-                    <td class="item-status" contenteditable="true"><%= item.status %></td>
+                    <td class="item-title" ><%= item.keywords.length ? item.keywords[0].keywords.join(',') : '' %></td>
+                    <td class="item-tags" ><%= item.account.name %></td>
+                    <td class="item-status" ><%= item.mockup.name %></td>
+                    <td class="item-status" ><%= item.status %></td>
                 </tr>
         
                 <% }) %>

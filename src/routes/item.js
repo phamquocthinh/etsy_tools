@@ -52,9 +52,18 @@ item.route('/upload')
             }
             
             let files = req.files
-            let data = req.body
-            console.log(data)
-            await saveItems(files, data)
+            let {
+                accountId,
+                keywordId,
+                mockupId
+            } = req.body
+
+            if (keywordId == 'Choose...') keywordId = null
+            if (accountId == 'Choose...' || mockupId == 'Choose...') {
+                return res.json({message: 'missing params'})
+            }
+
+            await saveItems(files, {accountId, keywordId, mockupId})
             return res.redirect('/item')
         })
     })

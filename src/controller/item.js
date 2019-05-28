@@ -1,17 +1,5 @@
-import Promise from "bluebird"
-import request from "request"
-import fs from "fs"
-import path from 'path'
-import jimp from 'jimp'
-import { getVariations } from '../config/variations'
-import {
-    DESCRIPTION,
-    TAXONOMY_ID
-} from '../config/defaulValues'
+
 import Items from '../models/item'
-import Accounts from '../models/account'
-import Mockups from '../models/mockup'
-import Keywords from '../models/keyword'
 
 const saveItems = async(files, data) => {
     let {
@@ -34,7 +22,7 @@ const saveItems = async(files, data) => {
                 title: title,
                 dir: '/images/uploads/' + file.filename,
                 account: accountId,
-                keywords: [keywordId],
+                keywords: keywordId ? [keywordId] : [],
                 mockup: mockupId,
                 createdAt: new Date()
             })
