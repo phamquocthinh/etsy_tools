@@ -88,6 +88,6 @@ h2 {
 
 @media (min-width: 992px) {
   .container {
-    width: 450px;
+    width: 100%;
   }
 }

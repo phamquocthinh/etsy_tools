@@ -1,5 +1,4 @@
 import express from 'express'
-import Items from '../models/item'
 import multer from 'multer'
 import path from 'path'
 import fs from 'fs'
@@ -7,9 +6,9 @@ import fs from 'fs'
 import Accounts from '../models/account'
 import Mockups from '../models/mockup'
 import Keywords from '../models/keyword'
+import Items from '../models/item'
 
 import { saveItems } from '../controller/item'
-
 
 let storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -34,11 +33,13 @@ item.get('/', async(req, res, next) => {
     let accounts = await Accounts.find()
     let keywords = await Keywords.find()
     let mockups = await Mockups.find()
-
+    let items = await Items.find().populate('keywords').populate('mockup').populate('account').exec()
+    console.log(items)
     res.render('item', { data: {
         accounts,
         keywords,
-        mockups
+        mockups,
+        items
     }})
 })
 
