@@ -106,9 +106,9 @@ const updateVariations = (oauth, id, price) => {
     let variations = getVariations(id, price)
     let data = {
         "products": variations,
-        "price_on_property":'513,62809790533',
+        "price_on_property":'513',
         "quantity_on_property": '',
-        "sku_on_property": '513,62809790533'
+        "sku_on_property": '513'
     }
     
     return new Promise((resolve, reject) => {
