@@ -14,6 +14,7 @@ import dashboard from './routes/dashboard'
 import product from './routes/product'
 import image from './routes/image'
 import item from './routes/item'
+import amzImg from './routes/amz-img'
 
 let app = express()
 open()
@@ -53,6 +54,7 @@ app.use('/dashboard', dashboard)
 app.use('/product', product)
 app.use('/image', image)
 app.use('/item', item)
+app.use('/amz-img', amzImg)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

@@ -1,0 +1,55 @@
+<% include header.ejs %>
+<div class="col-12">
+    <form>
+        <div class="form-group col-6">
+            <label for="link">AMZ URL</label>
+            <textarea class="form-control" rows="10" id="link"></textarea>
+        </div>
+        <button type="button" id="btn-execute" class="btn btn-info">Execute</button>
+        <progress class="" id="progress" value="0" max="100" style="visibility:hidden;width:40%"></progress><span id="process"></span>
+        <button type="button" id="download" class="btn btn-success" style="visibility:hidden;"></button>
+    </form>
+</div>
+<script>
+    $(function() {
+        $('#btn-execute').on('click', (e) => {
+            e.preventDefault()
+            var strLinks = $("#link").val();
+            var arrLinks = strLinks.split('\n');
+
+            if (!arrLinks && !arrLinks.length) return
+
+            return new Promise((resolve, reject) => {
+                $.post({
+                    url: '/amz-img',
+                    data: {links: strLinks},
+                    dataType: 'json',
+                    success: function (json) {
+                        console.log('ajax')
+                        resolve(json)
+                    },
+                    error: function (xhr, status, err) {
+                        reject(err)
+                    }
+                })
+            })
+            .then(res => {
+                return Promise.each(res.result, item => {
+                    downloadImg(item)
+                })
+            })
+            .catch(console.log) 
+        })
+
+        function downloadImg(item) {
+            var pom = document.createElement('a');
+            pom.setAttribute('href', 'data:application/octet-stream,' + encodeURIComponent(item.url));
+            pom.setAttribute('download', item.name + '.png');
+            pom.style.display = 'none';
+            document.body.appendChild(pom);
+            pom.click();
+            document.body.removeChild(pom); 
+        }
+    })
+</script>
+<% include footer.ejs %>
