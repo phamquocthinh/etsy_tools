@@ -26,6 +26,7 @@ amzImg.route('/')
 	.post(async (req, res) => {
         let {links} = req.body
         let arrLinks = links.split('\n')
+        arrLinks = _.uniq(arrLinks)
         let arrRes = []
 
         return Promise.map(arrLinks, link => {
