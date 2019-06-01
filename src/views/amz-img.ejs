@@ -15,9 +15,8 @@
         $('#btn-execute').on('click', (e) => {
             e.preventDefault()
             var strLinks = $("#link").val();
-            var arrLinks = strLinks.split('\n');
 
-            if (!arrLinks && !arrLinks.length) return
+            if (!strLinks) return
 
             return new Promise((resolve, reject) => {
                 $.post({
@@ -42,13 +41,20 @@
         })
 
         function downloadImg(item) {
-            var pom = document.createElement('a');
-            pom.setAttribute('href', 'data:application/octet-stream,' + encodeURIComponent(item.url));
-            pom.setAttribute('download', item.name + '.png');
-            pom.style.display = 'none';
-            document.body.appendChild(pom);
-            pom.click();
-            document.body.removeChild(pom); 
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", item.url, true);
+            xhr.responseType = "blob";
+            xhr.onload = function(){
+                var urlCreator = window.URL || window.webkitURL;
+                var imageUrl = urlCreator.createObjectURL(this.response);
+                var tag = document.createElement('a');
+                tag.href = imageUrl;
+                tag.download = item.name + '.png';
+                document.body.appendChild(tag);
+                tag.click();
+                document.body.removeChild(tag);
+            }
+            xhr.send();
         }
     })
 </script>
