@@ -33,7 +33,7 @@ item.get('/', async(req, res, next) => {
     let accounts = await Accounts.find()
     let keywords = await Keywords.find()
     let mockups = await Mockups.find()
-    let items = await Items.find().sort({'createdAt': -1}).limit(100).populate('keywords').populate('mockup').populate('account').exec()
+    let items = await Items.find().sort({'createdAt': -1}).limit(10).populate('keywords').populate('mockup').populate('account').exec()
 
     res.render('item', { data: {
         accounts,
