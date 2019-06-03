@@ -16,6 +16,7 @@ import image from './routes/image'
 import item from './routes/item'
 import amzImg from './routes/amz-img'
 import keyword from './routes/keyword'
+import mockup from './routes/mockup'
 
 let app = express()
 open()
@@ -57,6 +58,7 @@ app.use('/image', image)
 app.use('/item', item)
 app.use('/amz-img', amzImg)
 app.use('/keyword', keyword)
+app.use('/mockup', mockup)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

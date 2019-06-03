@@ -63,34 +63,34 @@
     $(function() {
         $('#createKeywords').click(function(e) {
             var form = document.querySelector("#addKeywordForm")
-        if (!form) return alert("cannot find form")
+            if (!form) return alert("cannot find form")
 
-        var name = form.querySelector('input[name="name"]').value
-        var strKw = form.querySelector('textarea[name="keywords"]').value
+            var name = form.querySelector('input[name="name"]').value
+            var strKw = form.querySelector('textarea[name="keywords"]').value
 
-        if (!name || !strKw) return alert('Missing field')
+            if (!name || !strKw) return alert('Missing field')
 
-        let keywords = strKw.split(',')
-        let data = {
-            name,keywords
-        }
+            let keywords = strKw.split(',')
+            let data = {
+                name,keywords
+            }
 
-        if (confirm(`Confirm save?`)) {
-            $.ajax({
-                url: "/keyword",
-                type: "POST",
-                data: JSON.stringify(data),
-                contentType: "application/json",
-                dataType: "json",
-                success: function(response){
-                    alert("Update successful")
-                    location.reload()
-                },
-                error: function(xhr, textStatus, error) {
-                    alert("Got error when save data!")
-                }
-            })
-        }
+            if (confirm(`Confirm save?`)) {
+                $.ajax({
+                    url: "/keyword",
+                    type: "POST",
+                    data: JSON.stringify(data),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function(response){
+                        alert("Update successful")
+                        location.reload()
+                    },
+                    error: function(xhr, textStatus, error) {
+                        alert("Got error when save data!")
+                    }
+                })
+            }
         })
     })
 
