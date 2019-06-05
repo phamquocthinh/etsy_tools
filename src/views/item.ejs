@@ -49,9 +49,12 @@
             <table id="buzz-grid" class="table table-striped table-bordered table-hover">
                 <tr>
                     <th width="20%">
+                        title
+                    </th>
+                    <th width="15%">
                         image
                     </th>
-                    <th width="20%">
+                    <th width="15%">
                         keywords
                     </th>
                     <th width="20%">
@@ -63,14 +66,15 @@
                     <th width="10%">
                         status
                     </th>
-                    <th width="15%">
+                    <th width="5%">
                         log
                     </th>
                 </tr>
                 <% data.items.forEach(item => { %>
                 <tr>
+                    <td class="item-title" ><%= item.title %></td>
                     <td><img style="max-height: 150px" src="<%= item.dir %>"></img></td>
-                    <td class="item-keywords" ><%= item.keywords.length ? item.keywords[0].keywords.join(',') : '' %></td>
+                    <td class="item-keywords" ><%= item.keywords.length ? item.keywords[0].name : '' %></td>
                     <td class="item-account" ><%= item.account.name %></td>
                     <td class="item-mockup" ><%= item.mockup.name %></td>
                     <td class="item-status" ><%= item.status %></td>
