@@ -27,7 +27,7 @@ const execute = async() => {
 }
 
 const getItem = () => {
-    return Items.findOne({ pushedToEtsy: {$ne: 1}, createdMockup: 1 })
+    return Items.findOne({ pushedToEtsy: 0, createdMockup: 1 })
         .populate('mockup')
         .populate('keywords')
         .populate('account')
