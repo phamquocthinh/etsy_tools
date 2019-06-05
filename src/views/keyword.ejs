@@ -20,6 +20,7 @@
                 <td class="item-keyword" contenteditable="true"><%= item.keywords.length ? item.keywords.join(',') : '' %></td>
                 <td>
                     <a><button data-id="<%=item._id %>" type="button" class="btnSave btn btn-info btn-sm">Save</button></a>
+                    <a><button data-id="<%=item._id %>" type="button" class="btnDelete btn btn-info btn-sm">Delete</button></a>
                 </td>
             </tr>
     
@@ -88,6 +89,57 @@
                     },
                     error: function(xhr, textStatus, error) {
                         alert("Got error when save data!")
+                    }
+                })
+            }
+        })
+
+        $('.btnSave').click(function(e) {
+            let strKeywords = $(this).parents("tr").find(".item-keyword")[0].innerText
+            if (!strKeywords) return alert("Keywords can not be empty")
+            let id =  $(this).attr("data-id")
+            let keywords = strKeywords.split(',')
+            let data = {
+                id,keywords
+            }
+
+            if (confirm(`Confirm save?`)) {
+                $.ajax({
+                    url: "/keyword",
+                    type: "PUT",
+                    data: JSON.stringify(data),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function(response){
+                        alert("Update successful")
+                        location.reload()
+                    },
+                    error: function(xhr, textStatus, error) {
+                        alert("Got error when save data!")
+                    }
+                })
+            }
+        })
+
+        $('.btnDelete').click(function(e) {
+            let id =  $(this).attr("data-id")
+            let data = {
+                id
+            }
+
+            if (confirm(`Confirm delete?`)) {
+                $.ajax({
+                    url: "/keyword",
+                    type: "DELETE",
+                    data: JSON.stringify(data),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function(response){
+                        alert("Delete successful")
+                        location.reload()
+                    },
+                    error: function(xhr, textStatus, error) {
+                        alert("Got error when delete!")
                     }
                 })
             }
