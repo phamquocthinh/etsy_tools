@@ -30,17 +30,59 @@ let upload = multer({ storage: storage }).array('pic-file', 30)
 let item = express.Router()
 
 item.get('/', async(req, res, next) => {
+    let page = req.params.page || 1
+    let limit = 10
+    let count = await Items.count()
     let accounts = await Accounts.find()
     let keywords = await Keywords.find()
     let mockups = await Mockups.find()
-    let items = await Items.find().sort({'createdAt': -1}).limit(10).populate('keywords').populate('mockup').populate('account').exec()
+    let items = await Items.find()
+                            .sort({'createdAt': -1})
+                            .skip(page * 10 - limit)
+                            .limit(limit)
+                            .populate('keywords')
+                            .populate('mockup')
+                            .populate('account')
+                            .exec()
 
-    res.render('item', { data: {
-        accounts,
-        keywords,
-        mockups,
-        items
-    }})
+    return res.render('item', { 
+        data: {
+            accounts,
+            keywords,
+            mockups,
+            items
+        },
+        current: page,
+        pages: Math.ceil(count / 10)
+    })
+})
+
+item.get('/:page', async(req, res, next) => {
+    let page = req.params.page || 0
+    let limit = 10
+    let count = await Items.count()
+    let accounts = await Accounts.find()
+    let keywords = await Keywords.find()
+    let mockups = await Mockups.find()
+    let items = await Items.find()
+                            .sort({'createdAt': -1})
+                            .skip(page * 10 - limit)
+                            .limit(limit)
+                            .populate('keywords')
+                            .populate('mockup')
+                            .populate('account')
+                            .exec()
+
+    return res.render('item', {
+        data: {
+            accounts,
+            keywords,
+            mockups,
+            items
+        },
+        current: page,
+        pages: Math.ceil(count / 10)
+    })
 })
 
 item.route('/upload')
