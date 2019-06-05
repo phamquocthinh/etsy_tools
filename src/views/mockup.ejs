@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row justify-content">
         <div class="col-12">
-            <form class="form form-horizontal formMockup" role="form" action="/mockup/upload" enctype="multipart/form-data" method="post">
+            <form class="form form-horizontal formMockup" role="form" action="/mockup" enctype="multipart/form-data" method="post">
                 <div class="form-group">
                     <label class="control-label">Select File:</label>
                     <div class="control-label">
@@ -34,5 +34,125 @@
                 </div>
             </form>
         </div>
+        <% if(data.length) { %>
+            <div style="width: 100%; height:auto; margin-top: 30px; background-color: white;">
+                <table id="buzz-grid" class="table table-striped table-bordered table-hover">
+                    <tr>
+                        <th width="20%">
+                            name
+                        </th>
+                        <th width="20%">
+                            image
+                        </th>
+                        <th width="10%">
+                            resize
+                        </th>
+                        <th width="10%">
+                            x
+                        </th>
+                        <th width="10%">
+                            y
+                        </th>
+                        <th width="10%">
+                            price
+                        </th>
+                        <th width="20%">
+                            action
+                        </th>
+                    </tr>
+                    <% data.forEach(item => { %>
+            
+                    <tr>
+                        <td ><%= item.name %></td>
+                        <td><img style="max-height: 200px" src="<%= item.image %>"></img></td>
+                        <td class="item-resize" contenteditable="true"><%= item.resize%></td>
+                        <td class="item-position-x" contenteditable="true"><%= item.position.x %></td>
+                        <td class="item-position-y" contenteditable="true"><%= item.position.y %></td>
+                        <td class="item-price" contenteditable="true"><%= item.price %></td>
+                        <td>
+                            <a><button data-id="<%=item._id %>" type="button" class="btnSave btn btn-info btn-sm">Save</button></a>
+                            <a><button data-id="<%=item._id %>" type="button" class="btnDelete btn btn-info btn-sm">Delete</button></a>
+                        </td>
+                    </tr>
+            
+                    <% }) %>
+            
+                </table>
+            </div>
+        <% } %>  
     </div>
 </div>
+<script>
+    function isValidData(resize, x, y, price) {
+        if (isNaN(resize) || isNaN(x) || isNaN(y) || isNaN(price)) return false
+        return true
+    }
+
+    $(function() {
+        $('.btnSave').click(function(e) {
+            let resize = $(this).parents("tr").find(".item-resize")[0].innerText
+            let x = $(this).parents("tr").find(".item-position-x")[0].innerText
+            let y = $(this).parents("tr").find(".item-position-y")[0].innerText
+            let price = $(this).parents("tr").find(".item-price")[0].innerText
+
+            if (!isValidData(resize, x, y, price)) {
+                alert("Input data must be number")
+                return
+            } 
+
+            let id =  $(this).attr("data-id")
+            let data = {
+                id,
+                data: {
+                    resize,
+                    position: {
+                        x,
+                        y
+                    },
+                    price
+                }
+            }
+
+            if (confirm(`Confirm save?`)) {
+                $.ajax({
+                    url: "/mockup",
+                    type: "PUT",
+                    data: JSON.stringify(data),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function(response){
+                        alert("Update successful")
+                        location.reload()
+                    },
+                    error: function(xhr, textStatus, error) {
+                        alert("Got error when save data!")
+                    }
+                })
+            }
+        })
+
+        $('.btnDelete').click(function(e) {
+            let id =  $(this).attr("data-id")
+            let data = {
+                id
+            }
+
+            if (confirm(`Confirm delete?`)) {
+                $.ajax({
+                    url: "/mockup",
+                    type: "DELETE",
+                    data: JSON.stringify(data),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function(response){
+                        alert("Delete successful")
+                        location.reload()
+                    },
+                    error: function(xhr, textStatus, error) {
+                        alert("Got error when delete!")
+                    }
+                })
+            }
+        })
+   })
+</script>
