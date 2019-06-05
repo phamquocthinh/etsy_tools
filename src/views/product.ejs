@@ -1,24 +1,26 @@
 <% include header.ejs %>
-<form class="form form-horizontal" role="form"  action="/product/upload" enctype="multipart/form-data" method="post">   <div class="form-group">
-    <label class="control-label col-sm-2">Select File:</label>
-    <div class="control-label col-sm-10">
-		  <input type="file" name="pic-file" multiple/>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-3 col-sm-10">
-      <button type="submit" class="btn btn-primary btn-lg">Upload</button>
-    </div>
-  </div>
-</form>
-<div style="float: left">
-<a><button type="button" class="btnSeeAll btn btn-success">All Items</button></a> 
-<a><button type="button" class="btnSeePush btn btn-success">Non-Pushed</button></a>
-</div>
-
-<% if(items.length) { %>
-    <div style="width: 100%; height:auto; margin-top: 30px; background-color: white;">
-        <table id="buzz-grid" class="table table-striped table-bordered table-hover">
+<div class="container">
+    <div class="row justify-content">
+        <div class="col-12">
+            <form class="form form-horizontal" role="form" action="/product/upload" enctype="multipart/form-data" method="post">
+                <div class="form-group">
+                    <label class="control-label">Select File:</label>
+                    <div class="control-label">
+                        <input type="file" name="pic-file" multiple />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-lg">Upload</button>
+                </div>
+            </form>
+            <div style="float: left">
+                <a><button type="button" class="btnSeeAll btn btn-success">All Items</button></a>
+                <a><button type="button" class="btnSeePush btn btn-success">Non-Pushed</button></a>
+            </div>
+        </div>  
+        <% if(items.length) { %>
+        <div class="col-12">
+            <table id="buzz-grid" class="table table-striped table-bordered table-hover">
                 <tr>
                     <th width="15%">
                         name
@@ -39,27 +41,26 @@
                         action
                     </th>
                 </tr>
-            <% items.forEach(item => { %>
-    
-            <tr>
-                <td ><%= item.name %></td>
-                <td><img style="max-height: 200px" src="<%= item.dir %>"></img></td>
-                <td class="item-title" contenteditable="true"><%= item.title %></td>
-                <td class="item-tags" contenteditable="true"><%= item.tags.join() %></td>
-                <td class="item-status" contenteditable="true"><%= item.pushedToEtsy ? item.status : 'Non-Pushed' %></td>
-                <td>
-                    <a><button data-id="<%=item._id %>" type="button" class="btnSave btn btn-info btn-sm">Save</button></a>
-                    <% if(!item.pushedToEtsy) { %>
-                        <a><button data-id="<%=item._id %>" type="button" class="btnPush btn btn-info btn-sm">Push</button></a>
-                    <% } %>
-                </td>
-            </tr>
-    
-            <% }) %>
-    
-        </table>
+                <% items.forEach(item => { %>
+                <tr>
+                    <td ><%= item.name %></td>
+                    <td><img style="max-height: 200px" src="<%= item.dir %>"></img></td>
+                    <td class="item-title" contenteditable="true"><%= item.title %></td>
+                    <td class="item-tags" contenteditable="true"><%= item.tags.join() %></td>
+                    <td class="item-status" contenteditable="true"><%= item.pushedToEtsy ? item.status : 'Non-Pushed' %></td>
+                    <td>
+                        <a><button data-id="<%=item._id %>" type="button" class="btnSave btn btn-info btn-sm">Save</button></a>
+                        <% if(!item.pushedToEtsy) { %>
+                            <a><button data-id="<%=item._id %>" type="button" class="btnPush btn btn-info btn-sm">Push</button></a>
+                        <% } %>
+                    </td>
+                </tr>
+                <% }) %>
+            </table>
+        </div>
+        <% } %>
     </div>
-<% } %>
+</div>
 <script>
     $(function() {
         

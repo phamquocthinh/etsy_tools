@@ -1,14 +1,16 @@
 <% include header.ejs %>
-<div class="col-12">
-    <form>
-        <div class="form-group col-6">
-            <label for="link">AMZ URL</label>
-            <textarea class="form-control" rows="10" id="link"></textarea>
+<div class="container">
+    <div class="row justify-content">
+        <div class="col-12">
+            <form>
+                <div class="form-group col-12">
+                    <label for="link">AMZ URL</label>
+                    <textarea class="form-control" rows="10" id="link"></textarea>
+                </div>
+                <button type="button" id="btn-execute" class="btn btn-info">Execute</button>
+            </form>
         </div>
-        <button type="button" id="btn-execute" class="btn btn-info">Execute</button>
-        <progress class="" id="progress" value="0" max="100" style="visibility:hidden;width:40%"></progress><span id="process"></span>
-        <button type="button" id="download" class="btn btn-success" style="visibility:hidden;"></button>
-    </form>
+    </div>
 </div>
 <script>
     $(function() {
