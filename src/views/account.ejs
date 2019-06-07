@@ -1,6 +1,7 @@
 <% include header.ejs %>
 <div class="container">
     <div class="row justify-content">
+        <button type="button" class="btnCreate btn btn-info btn-md">Create</button>
         <% if(accounts.length) { %>
         <div style="width: 100%; height:auto; margin-top: 30px; background-color: white;">
             <table id="buzz-grid" class="table table-striped table-bordered table-hover">
@@ -33,6 +34,10 @@
 
 <script>
     $(function() {
+        $('.btnCreate').click(function(e) {
+            window.location.replace('/token')
+        })
+
         $('.btnSave').click(function(e) {
             let shipping_template_id = $(this).parents("tr").find(".item-shipping-id")[0].innerText
             let name = $(this).parents("tr").find(".item-name")[0].innerText
