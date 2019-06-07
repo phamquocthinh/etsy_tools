@@ -12,7 +12,8 @@ const Mockups = new Schema({
         y: Number
     },
     resize: Number,
-    price: Number
+    price: Number,
+    type: String
 }, { collection: 'mockup' })
 
 export default mongoose.model('mockup', Mockups)

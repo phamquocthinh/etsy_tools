@@ -10,6 +10,7 @@ const Accounts = new Schema({
     consumer_secret: String,
     token: String,
     token_secret: String,
+    is_disabled: {type: Boolean, default: true},
     shipping_template_id: Number
 }, { collection: 'account' });
 

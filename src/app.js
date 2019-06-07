@@ -5,6 +5,7 @@ import logger from 'morgan'
 import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser'
 import session from 'express-session'
+import cors from 'cors'
 
 import { open } from './db/mongoDB'
 import index from './routes/index'
@@ -17,6 +18,7 @@ import item from './routes/item'
 import amzImg from './routes/amz-img'
 import keyword from './routes/keyword'
 import mockup from './routes/mockup'
+import account from './routes/account'
 
 let app = express()
 open()
@@ -27,6 +29,13 @@ app.set('view engine', 'ejs')
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+
+let corsOptions = {
+  origin: '*',
+  preflightContinue: true
+}
+
+app.use(cors(corsOptions))
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -59,6 +68,7 @@ app.use('/item', item)
 app.use('/amz-img', amzImg)
 app.use('/keyword', keyword)
 app.use('/mockup', mockup)
+app.use('/account', account)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

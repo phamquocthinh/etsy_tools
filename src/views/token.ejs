@@ -1,0 +1,55 @@
+<% include header.ejs %>
+<div class="container">
+    <div class="row justify-content">
+        <div class="col-12">
+            <form class="form form-horizontal" role="form" action="#">
+                <div class="form-group col-sm-3 m-auto">
+                    <label for="name">Appkey</label>
+                    <input class="form-control" type="text" name="key">
+                </div>
+                <div class="form-group col-sm-3 m-auto">
+                    <label for="name">Appsecret</label>
+                    <input class="form-control" type="text" name="secret">
+                </div>
+                <div class="form-group mt-3">
+                    <div class="col-sm-6 m-auto">
+                        <button type="button" class="btnSave btn btn-primary btn-lg">Get App Permission</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(function() {
+        $('.btnSave').click(function(e) {
+            let key = $('input[name="key"]').val()
+            let secret = $('input[name="secret"]').val()
+
+            let data = {
+                key,
+                secret
+            }
+
+            if (confirm(`Confirm?`)) {
+                $.ajax({
+                    url: "/token",
+                    type: "POST",
+                    data: JSON.stringify(data),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function(response){
+                        alert("Get token successful")
+                        let url = response.login_url
+
+                        window.location.replace(url)
+                        //location.reload()
+                    },
+                    error: function(xhr, textStatus, error) {
+                        alert("Got error!")
+                    }
+                })
+            }
+        })
+   })
+</script>

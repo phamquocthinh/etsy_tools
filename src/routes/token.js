@@ -1,85 +1,90 @@
-import express from 'express';
+import express from 'express'
 import oauth from 'oauth'
-import { CONSUMER_KEY, CONSUMER_SECRET, CALLBACK_URL } from '../config/defaulValues'
+import { CALLBACK_URL } from '../config/defaulValues'
 
-let token = express.Router();
+import Accounts from '../models/account'
 
-var oa = new oauth.OAuth(
-    'https://openapi.etsy.com/v2/oauth/request_token',
-    'https://openapi.etsy.com/v2/oauth/access_token',
-    CONSUMER_KEY,
-    CONSUMER_SECRET,
-    '1.0A',
-    CALLBACK_URL,
-    'HMAC-SHA1'
-);
+let token = express.Router()
 
-// Root route
-token.get('/', function(req, res){
+token.route('/')
+    .get((req, res) => {
+        return res.render('token')
+    })
+    .post((req, res) => {
+        let {key, secret} = req.body
 
-    // If session variable has not been initialized
-    if (!req.session.oauth) {
-        req.session.oauth = {};
-    }
+        let oa = new oauth.OAuth(
+            'https://openapi.etsy.com/v2/oauth/request_token',
+            'https://openapi.etsy.com/v2/oauth/access_token',
+            key,
+            secret,
+            '1.0A',
+            CALLBACK_URL,
+            'HMAC-SHA1'
+        )
 
-    // If access token has not been generated
-    if(!req.session.oauth.access_token) {
-        res.redirect('/token/get-access-token');
-    } else {
-        console.log('zzz')
-    }
-});
-
-// Request OAuth request token, and redirect the user to authorization page
-token.get('/get-access-token', function(req, res) {
-
-    console.log('*** get-access-token ***')
-
-    oa.getOAuthRequestToken(function (error, token, token_secret, results) {
-        if (error) {
-            console.log(error);
-        } else {
-            req.session.oauth.token = token;
-            req.session.oauth.token_secret = token_secret;
-
-            console.log('Token: ' + token);
-            console.log('Secret: ' + token_secret);
-
-            res.redirect(results["login_url"]);
+        if (!req.session.oauth) {
+            req.session.oauth = {}
         }
-    });
 
-});
+        oa.getOAuthRequestToken((error, token, token_secret, results) => {
+            if (error) {
+                console.log(error)
+                return res.json({status: 'error', message: error})
+            } else {
+                req.session.oauth.key = key
+                req.session.oauth.secret = secret
+                req.session.oauth.token = token
+                req.session.oauth.token_secret = token_secret
+    
+                return res.json(results)
+            }
+        })
+    })
 
 // Get OAuth access token on callback
-token.get('/callback', function(req, res) {
+token.route('/callback')
+    .get((req, res) => {
+        if (req.session.oauth) {
+            let verifier = req.query.oauth_verifier
+            let {key, secret, token, token_secret} = req.session.oauth
 
-    console.log('*** callback ***')
+            let oa = new oauth.OAuth(
+                'https://openapi.etsy.com/v2/oauth/request_token',
+                'https://openapi.etsy.com/v2/oauth/access_token',
+                key,
+                secret,
+                '1.0A',
+                CALLBACK_URL,
+                'HMAC-SHA1'
+            )
 
-    if (req.session.oauth) {
+            oa.getOAuthAccessToken(
+                token,
+                token_secret,
+                verifier,
+                async (error, access_token, access_token_secret, results) => {
+                    if (error){
+                        console.log(error)
+                        return res.json({status: 'error', message: error})
+                    } else {
+                        console.log('Token: ' + access_token)
+                        console.log('Secret: ' + access_token_secret)
+                        console.log('Verifier: ' + verifier)
 
-        req.session.oauth.verifier = req.query.oauth_verifier;
+                        await Accounts.create({
+                            name: Date.now() + 'new-account',
+                            consumer_key: key,
+                            consumer_secret: secret,
+                            token: access_token,
+                            token_secret: access_token_secret
+                        })
 
-        oa.getOAuthAccessToken(
-            req.session.oauth.token,
-            req.session.oauth.token_secret,
-            req.session.oauth.verifier,
-            function( error, token, token_secret, results ){
-                if (error){
-                    console.log(error);
-                } else {
-                    req.session.oauth.access_token = token;
-                    req.session.oauth.access_token_secret = token_secret;
-
-                    console.log('Token: ' + token);
-                    console.log('Secret: ' + token_secret);
-                    console.log('Verifier: ' + req.session.oauth.verifier);
-
-                    res.redirect('/product')
+                        return res.redirect('/account')
+                    }
                 }
-            }
-        );
-    }
-});
+            )
+        }
+    })
 
 module.exports = token

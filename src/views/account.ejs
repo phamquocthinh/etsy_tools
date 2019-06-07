@@ -1,0 +1,92 @@
+<% include header.ejs %>
+<div class="container">
+    <div class="row justify-content">
+        <% if(accounts.length) { %>
+        <div style="width: 100%; height:auto; margin-top: 30px; background-color: white;">
+            <table id="buzz-grid" class="table table-striped table-bordered table-hover">
+                <tr>
+                    <th width="40%">
+                        name
+                    </th>
+                    <th width="40%">
+                        shipping id
+                    </th>
+                    <th width="20%">
+                        action
+                    </th>
+                </tr>
+                <% accounts.forEach(account => { %>
+                <tr>
+                    <td class="item-name" contenteditable="true"><%= account.name %></td>
+                    <td class="item-shipping-id" contenteditable="true"><%= account.shipping_template_id || '' %></td>
+                    <td>
+                        <a><button data-id="<%=account._id %>" type="button" class="btnSave btn btn-info btn-sm">Save</button></a>
+                        <a><button data-id="<%=account._id %>" type="button" class="btnDelete btn btn-info btn-sm">Delete</button></a>
+                    </td>
+                </tr>
+                <% }) %>
+            </table>
+        </div>
+        <% } %>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        $('.btnSave').click(function(e) {
+            let shipping_template_id = $(this).parents("tr").find(".item-shipping-id")[0].innerText
+            let name = $(this).parents("tr").find(".item-name")[0].innerText
+            let id =  $(this).attr("data-id")
+            let data = {
+                id,shipping_template_id,name
+            }
+
+            if (confirm(`Confirm save?`)) {
+                $.ajax({
+                    url: "/account",
+                    type: "PUT",
+                    data: JSON.stringify(data),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function(response){
+                        if (response.status && response.status === 'error') {
+                            alert(JSON.stringify(response.error))
+                            return
+                        }
+
+                        alert("Update successful")
+                        location.reload()
+                    },
+                    error: function(xhr, textStatus, error) {
+                        alert("Got error when save data!")
+                    }
+                })
+            }
+        })
+
+        $('.btnDelete').click(function(e) {
+            let id =  $(this).attr("data-id")
+            let data = {
+                id
+            }
+
+            if (confirm(`Confirm delete?`)) {
+                $.ajax({
+                    url: "/account",
+                    type: "DELETE",
+                    data: JSON.stringify(data),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function(response){
+                        alert("Delete successful")
+                        location.reload()
+                    },
+                    error: function(xhr, textStatus, error) {
+                        alert("Got error when delete!")
+                    }
+                })
+            }
+        })
+    })
+
+</script>

@@ -21,7 +21,6 @@ const Items = new Schema({
     keywords: [{ type: Schema.Types.ObjectId, ref: Keywords }],
     account: { type: Schema.Types.ObjectId, ref: Accounts },
     mockup: { type: Schema.Types.ObjectId, ref: Mockups },
-    mockupDir: String,
     status: String,
     error: Schema.Types.Mixed
 }, { collection: 'item' });

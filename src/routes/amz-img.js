@@ -20,9 +20,7 @@ let amzImg = express.Router();
 amzImg.route('/')
 	.get(async (req, res) => {
 		return res.render('amz-img');
-    });
-
-amzImg.route('/')
+    })
 	.post(async (req, res) => {
         let {links} = req.body
         let arrLinks = links.split('\n')
@@ -31,41 +29,45 @@ amzImg.route('/')
 
         return Promise.map(arrLinks, link => {
             let browserAgent = _.sample(browserAgents)
-                let cmd = "curl -sfL --compressed -H 'User-Agent: " + browserAgent + "' --max-time 10 "
+            let cmd = "curl -sfL --compressed -H 'User-Agent: " + browserAgent + "' --max-time 10 "
 
-                cmd += "-L '" + link + "'"
+            cmd += "-L '" + link + "'"
 
-                return new Promise((resolve, reject) => {
-                    exec(cmd, {maxBuffer: 10*1024*1024}, (err, html) => {
-                        if (err && !html) {
-                            console.log(err)
-                            return resolve()
-                        }
-
-                        return resolve(html)
-                    })
-                })
-                .then((html) => {
-                    let $ = cheerio.load(html)
-                    let imgUrl = $('#imgTagWrapperId img').attr('src')
-                    let name = $('#imgTagWrapperId img').attr('alt')
-                    imgUrl = decodeURI(imgUrl)
-                    let pattern = /^(.*?amazon.com\/images\/I\/)(.*?\|)(.*?\|)(.*?\.png)(\|.*?)$/
-                    let matches = imgUrl.match(new RegExp(pattern))
-
-                    let resUrl = ''
-
-                    if (matches && matches.length) {
-                        if (matches[1] && matches[4]) resUrl = matches[1] + matches[4]
+            return new Promise((resolve, reject) => {
+                exec(cmd, {maxBuffer: 10*1024*1024}, (err, html) => {
+                    if (err && !html) {
+                        console.log(err)
+                        return resolve()
                     }
 
-                    if (!resUrl) return
-
-                    arrRes.push({
-                        name: name,
-                        url: resUrl
-                    })
+                    return resolve(html)
                 })
+            })
+            .then((html) => {
+                if (!html) return
+                
+                let $ = cheerio.load(html)
+                let imgUrl = $('#imgTagWrapperId img').attr('src')
+                let name = $('#imgTagWrapperId img').attr('alt')
+                imgUrl = decodeURI(imgUrl)
+                let pattern = /^(.*?amazon.com\/images\/I\/)(.*?\|)(.*?\|)(.*?\.png)(\|.*?)$/
+                let matches = imgUrl.match(new RegExp(pattern))
+
+                let resUrl = ''
+
+                if (matches && matches.length) {
+                    if (matches[1] && matches[4]) resUrl = matches[1] + matches[4]
+                }
+
+                if (!resUrl) return
+
+                arrRes.push({
+                    name: name,
+                    url: resUrl
+                })
+                
+                return
+            })
         }, { concurrency: 16 })
         .then(() => {
             return res.json({result: arrRes})
