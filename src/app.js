@@ -19,6 +19,7 @@ import amzImg from './routes/amz-img'
 import keyword from './routes/keyword'
 import mockup from './routes/mockup'
 import account from './routes/account'
+import template from './routes/template'
 
 let app = express()
 open()
@@ -50,14 +51,14 @@ app.use(session({
 
 app.use('/user', user)
 
-app.use((req, res, next) => {
-	// do logging
-    const sess = req.session
-	if (!sess.USER) {
-		return res.redirect('/user/login')
-	}
-	next() // make sure we go to the next routes and don't stop here
-})
+// app.use((req, res, next) => {
+// 	// do logging
+//     const sess = req.session
+// 	if (!sess.USER) {
+// 		return res.redirect('/user/login')
+// 	}
+// 	next() // make sure we go to the next routes and don't stop here
+// })
 
 app.use('/', index)
 app.use('/token', token)
@@ -69,6 +70,7 @@ app.use('/amz-img', amzImg)
 app.use('/keyword', keyword)
 app.use('/mockup', mockup)
 app.use('/account', account)
+app.use('/template', template)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
