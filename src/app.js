@@ -51,19 +51,18 @@ app.use(session({
 
 app.use('/user', user)
 
-// app.use((req, res, next) => {
-// 	// do logging
-//     const sess = req.session
-// 	if (!sess.USER) {
-// 		return res.redirect('/user/login')
-// 	}
-// 	next() // make sure we go to the next routes and don't stop here
-// })
+app.use((req, res, next) => {
+	// do logging
+    const sess = req.session
+	if (!sess.USER) {
+		return res.redirect('/user/login')
+	}
+	next() // make sure we go to the next routes and don't stop here
+})
 
 app.use('/', index)
 app.use('/token', token)
 app.use('/dashboard', dashboard)
-app.use('/product', product)
 app.use('/image', image)
 app.use('/item', item)
 app.use('/amz-img', amzImg)
