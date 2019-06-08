@@ -161,7 +161,7 @@ const processItem = async(item) => {
         let data = {
             quantity: 999,
             title,
-            description: description ? description : `${title}\n${DESCRIPTION}`,
+            description: description ? `${title}\n${description}` : `${title}\n${DESCRIPTION}`,
             price,
             who_made: 'i_did',
             is_supply: false,
