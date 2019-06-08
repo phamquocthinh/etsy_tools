@@ -9,8 +9,17 @@
                     <th width="40%">
                         name
                     </th>
-                    <th width="40%">
-                        shipping id
+                    <th width="10%">
+                        default
+                    </th>
+                    <th width="10%">
+                        tshirt
+                    </th>
+                    <th width="10%">
+                        poster
+                    </th>
+                    <th width="10%">
+                        cup
                     </th>
                     <th width="20%">
                         action
@@ -18,10 +27,13 @@
                 </tr>
                 <% accounts.forEach(account => { %>
                 <tr>
-                    <td class="item-name" contenteditable="true"><%= account.name %></td>
-                    <td class="item-shipping-id" contenteditable="true"><%= account.shipping_template_id || '' %></td>
+                    <td class="item-name"><%= account.name %></td>
+                    <td class="item-shipping-id" ><%= account.shipping_template ? account.shipping_template.default : '' %></td>
+                    <td class="item-shipping-id" ><%= account.shipping_template ? account.shipping_template.tshirt : '' %></td>
+                    <td class="item-shipping-id" ><%= account.shipping_template ? account.shipping_template.poster : '' %></td>
+                    <td class="item-shipping-id" ><%= account.shipping_template ? account.shipping_template.cup : '' %></td>
                     <td>
-                        <a><button data-id="<%=account._id %>" type="button" class="btnSave btn btn-info btn-sm">Save</button></a>
+                        <a><button data-id="<%=account._id %>" data-json="<%= JSON.stringify(account) %>" type="button" class="btnEdit btn btn-info btn-md" data-keyboard="true" data-toggle="modal" data-target="#editAccount">Edit</button></a>
                         <a><button data-id="<%=account._id %>" type="button" class="btnDelete btn btn-info btn-sm">Delete</button></a>
                     </td>
                 </tr>
@@ -32,18 +44,92 @@
     </div>
 </div>
 
+<div class="modal fade" id="editAccount" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <form action="#" id="editAccountForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input class="form-control" placeholder="Enter name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <div class="row mt-3">
+                            <label class="col-sm-2 col-form-label" for="x">Default</label>
+                            <div class="col-sm-4">
+                                <input class="form-control" type="number" placeholder="" name="default">
+                            </div>
+                            <label class="col-sm-2 col-form-label" for="y">T-Shirt</label>
+                            <div class="col-sm-4">
+                                <input class="form-control" type="number" placeholder="" name="tshirt">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <label class="col-sm-2 col-form-label" for="x">Poster</label>
+                            <div class="col-sm-4">
+                                <input class="form-control" type="number" placeholder="" name="poster">
+                            </div>
+                            <label class="col-sm-2 col-form-label" for="x">Cup</label>
+                            <div class="col-sm-4">
+                                <input class="form-control" type="number" placeholder="" name="cup">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="btnSave" type="button" class="btnSave btn btn-default btn-info">Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
 <script>
     $(function() {
         $('.btnCreate').click(function(e) {
             window.location.replace('/token')
         })
 
-        $('.btnSave').click(function(e) {
-            let shipping_template_id = $(this).parents("tr").find(".item-shipping-id")[0].innerText
-            let name = $(this).parents("tr").find(".item-name")[0].innerText
+        $('#editAccount').on('shown.bs.modal', function (e) {
+            let data = $(e.relatedTarget).attr('data-json')
+            data = JSON.parse(data)
+            let {shipping_template} = data
+
+            $(this).find('input[name="name"]').val(data.name || '')
+            $(this).find('input[name="default"]').val(shipping_template.default || 0)
+            $(this).find('input[name="tshirt"]').val(shipping_template.tshirt || 0)
+            $(this).find('input[name="poster"]').val(shipping_template.poster || 0)
+            $(this).find('input[name="cup"]').val(shipping_template.cup || 0)
+
+            $(this).find('#btnSave').attr('data-id', data._id)
+        })
+
+        $('#btnSave').click(function(e) {
+            let form = $("#editAccountForm")
+            if (!form) {
+                alert("cannot find form")
+                return
+            } 
+
+            let name = $(form).find('input[name="name"]').val()
+            let sdefault = $(form).find('input[name="default"]').val()
+            let tshirt = $(form).find('input[name="tshirt"]').val()
+            let poster = $(form).find('input[name="poster"]').val()
+            let cup = $(form).find('input[name="cup"]').val()
             let id =  $(this).attr("data-id")
+
             let data = {
-                id,shipping_template_id,name
+                id,
+                name,
+                shipping_template: {
+                    default: sdefault,
+                    tshirt,
+                    poster,
+                    cup
+                }
             }
 
             if (confirm(`Confirm save?`)) {

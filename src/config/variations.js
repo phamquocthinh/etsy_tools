@@ -45,7 +45,7 @@ const getVariations = (listingId, price) => {
             if(s.indexOf('3XL') > -1) priceVal += 3
             if(s.indexOf('2XL') > -1) priceVal += 2
             
-            if(s.indexOf('Ladies') > -1) priceVal += 1
+            if(s.indexOf('Ladies') > -1) priceVal += 2
             if(s.indexOf('Hoodie') > -1) priceVal += 15
 
             let item = {"property_values":[{"property_id": 513,"property_name": "Size and Style","value": s},{ "property_id": 514, "property_name": "Color", "value": c }],"offerings": [{ "price": priceVal, "quantity": 999, "is_enabled": 1, "is_deleted": 0 }],"is_deleted": 0,"sku": sku}

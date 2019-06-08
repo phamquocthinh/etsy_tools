@@ -4,8 +4,7 @@ import Items from '../models/item'
 const saveItems = async(files, data) => {
     let {
         accountId,
-        mockupId,
-        keywordId
+        templateId
     } = data
 
     try {
@@ -22,8 +21,7 @@ const saveItems = async(files, data) => {
                 title: title,
                 dir: '/images/uploads/' + file.filename,
                 account: accountId,
-                keywords: keywordId ? [keywordId] : [],
-                mockup: mockupId,
+                template: templateId,
                 createdAt: new Date()
             })
         }

@@ -73,7 +73,10 @@
                         <th width="10%">
                             price
                         </th>
-                        <th width="20%">
+                        <th width="10%">
+                            type
+                        </th>
+                        <th width="10%">
                             action
                         </th>
                     </tr>
@@ -86,6 +89,7 @@
                         <td class="item-position-x" contenteditable="true"><%= item.position.x %></td>
                         <td class="item-position-y" contenteditable="true"><%= item.position.y %></td>
                         <td class="item-price" contenteditable="true"><%= item.price %></td>
+                        <td class="item-type" contenteditable="true"><%= item.type %></td>
                         <td>
                             <a><button data-id="<%=item._id %>" type="button" class="btnSave btn btn-info btn-sm">Save</button></a>
                             <a><button data-id="<%=item._id %>" type="button" class="btnDelete btn btn-info btn-sm">Delete</button></a>

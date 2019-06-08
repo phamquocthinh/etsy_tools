@@ -12,10 +12,10 @@ account.route('/')
         })
     })
     .put(async(req, res) => {
-        let {id, shipping_template_id, name} = req.body
+        let {id, shipping_template, name} = req.body
 
         try {
-            await Accounts.findByIdAndUpdate(id, {shipping_template_id, name, is_disabled: false})
+            await Accounts.findByIdAndUpdate(id, {shipping_template, name, is_disabled: false})
             return res.json({'message': 'Update successful'})
         } catch(e) {
             console.log(e)

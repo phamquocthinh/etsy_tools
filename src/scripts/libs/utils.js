@@ -9,14 +9,15 @@ import {
     DESCRIPTION,
     TAXONOMY_ID
 } from '../../config/defaulValues'
-import { getVariations } from '../../config/variations'
+import { getVariations } from '../../lib/variations'
 
 const createMockup = async(item) => {
     let {
         name,
         dir,
-        mockup
+        template
     } = item
+    let {mockup} = template
     let {
         resize,
         position,
@@ -102,14 +103,8 @@ const updateImage = (oauth, id, file) => {
     })
 }
 
-const updateVariations = (oauth, id, price) => {
-    let variations = getVariations(id, price)
-    let data = {
-        "products": variations,
-        "price_on_property":'513',
-        "quantity_on_property": '',
-        "sku_on_property": '513'
-    }
+const updateVariations = (oauth, id, price, type) => {
+    let data = getVariations(id, price, type)
     
     return new Promise((resolve, reject) => {
         request.put(
@@ -146,31 +141,35 @@ const processItem = async(item) => {
         _id,
         name,
         title,
-        mockup,
-        account,
-        keywords
+        template,
+        account
     } = item
-    let {price} = mockup
-    let {shipping_template_id} = account
+    let { mockup, keywords, description } = template
+    let {price, type} = mockup
+    let {shipping_template} = account
     let tags = ''
 
+    type = type || 'tshirt'
+    title = title.substring(0, 139)
+    keywords = keywords.slice(0, 13)
+
     _.forEach(keywords, keywordTemplate => {
-            tags += keywordTemplate.keywords.join(',')
+        tags += keywordTemplate.keywords.join(',')
     })
 
     try {
         let data = {
             quantity: 999,
             title,
-            description: `${title}\n${DESCRIPTION}`,
+            description: description ? description : `${title}\n${DESCRIPTION}`,
             price,
             who_made: 'i_did',
             is_supply: false,
             when_made: 'made_to_order',
-            shipping_template_id,
+            shipping_template_id: shipping_template[type] || shipping_template['default'],
             tags,
             state: 'draft',
-            taxonomy_id: TAXONOMY_ID
+            taxonomy_id: TAXONOMY_ID[type]
         }
 
         let oauth = getOauth(account)
@@ -189,7 +188,7 @@ const processItem = async(item) => {
             let filePath = path.join(__dirname, '../../public/images/products/' + name + '/' + file)
             await updateImage(oauth, listingId, filePath)
         }
-        await updateVariations(oauth, listingId, price)
+        await updateVariations(oauth, listingId, price, type)
     } catch(e) {
         throw e
     }

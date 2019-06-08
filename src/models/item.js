@@ -1,7 +1,6 @@
-import mongoose from 'mongoose';
-import Keywords from './keyword'
+import mongoose from 'mongoose'
 import Accounts from './account'
-import Mockups from './mockup'
+import Templates from './template'
 
 const Schema = mongoose.Schema
 const Items = new Schema({
@@ -18,9 +17,8 @@ const Items = new Schema({
     createdMockup: { type: Number, default: 0 },
     createdBy: { type: String, default: 'app' },
     createdAt: Date,
-    keywords: [{ type: Schema.Types.ObjectId, ref: Keywords }],
+    template: { type: Schema.Types.ObjectId, ref: Templates },
     account: { type: Schema.Types.ObjectId, ref: Accounts },
-    mockup: { type: Schema.Types.ObjectId, ref: Mockups },
     status: String,
     error: Schema.Types.Mixed
 }, { collection: 'item' });

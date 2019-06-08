@@ -47,7 +47,7 @@ amzImg.route('/')
                 if (!html) return
                 
                 let $ = cheerio.load(html)
-                let imgUrl = $('#imgTagWrapperId img').attr('src')
+                let imgUrl = $('#imgTagWrapperId img').attr('data-old-hires')
                 let name = $('#imgTagWrapperId img').attr('alt')
                 imgUrl = decodeURI(imgUrl)
                 let pattern = /^(.*?amazon.com\/images\/I\/)(.*?\|)(.*?\|)(.*?\.png)(\|.*?)$/
@@ -60,7 +60,7 @@ amzImg.route('/')
                 }
 
                 if (!resUrl) return
-
+                
                 arrRes.push({
                     name: name,
                     url: resUrl

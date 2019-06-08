@@ -4,8 +4,7 @@ import path from 'path'
 import fs from 'fs'
 
 import Accounts from '../models/account'
-import Mockups from '../models/mockup'
-import Keywords from '../models/keyword'
+import Templates from '../models/template'
 import Items from '../models/item'
 
 import { saveItems } from '../controller/item'
@@ -34,22 +33,19 @@ item.get('/', async(req, res, next) => {
     let limit = 10
     let count = await Items.count()
     let accounts = await Accounts.find({is_disabled: {$ne: true}})
-    let keywords = await Keywords.find()
-    let mockups = await Mockups.find()
+    let templates = await Templates.find()
     let items = await Items.find()
                             .sort({'createdAt': -1})
                             .skip(page * 10 - limit)
                             .limit(limit)
-                            .populate('keywords')
-                            .populate('mockup')
+                            .populate('template')
                             .populate('account')
                             .exec()
 
     return res.render('item', { 
         data: {
             accounts,
-            keywords,
-            mockups,
+            templates,
             items
         },
         current: page,
@@ -58,26 +54,23 @@ item.get('/', async(req, res, next) => {
 })
 
 item.get('/:page', async(req, res, next) => {
-    let page = req.params.page || 0
+    let page = req.params.page || 1
     let limit = 10
     let count = await Items.count()
-    let accounts = await Accounts.find()
-    let keywords = await Keywords.find()
-    let mockups = await Mockups.find()
+    let accounts = await Accounts.find({is_disabled: {$ne: true}})
+    let templates = await Templates.find()
     let items = await Items.find()
                             .sort({'createdAt': -1})
                             .skip(page * 10 - limit)
                             .limit(limit)
-                            .populate('keywords')
-                            .populate('mockup')
+                            .populate('template')
                             .populate('account')
                             .exec()
 
-    return res.render('item', {
+    return res.render('item', { 
         data: {
             accounts,
-            keywords,
-            mockups,
+            templates,
             items
         },
         current: page,
@@ -96,19 +89,16 @@ item.route('/upload')
             let files = req.files
             let {
                 accountId,
-                keywordId,
-                mockupId
+                templateId
             } = req.body
 
-            if (keywordId == 'Choose...') keywordId = null
-            if (accountId == 'Choose...' || mockupId == 'Choose...') {
+            if (accountId == 'Choose...' || templateId == 'Choose...') {
                 return res.json({message: 'missing params'})
             }
 
-            await saveItems(files, {accountId, keywordId, mockupId})
+            await saveItems(files, {accountId, templateId})
             return res.redirect('/item')
         })
     })
-
 
 module.exports = item

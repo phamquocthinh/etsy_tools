@@ -53,7 +53,7 @@ mockup.route('/')
             }
 
             let {
-                name, resize, x, y, price
+                name, resize, x, y, price, type
             } = req.body
 
             if (!name || !resize || !x || !y || !price ) {
@@ -82,7 +82,8 @@ mockup.route('/')
                     y
                 },
                 resize,
-                price
+                price,
+                type
             })
 
             return res.json({message: 'Mockup created', status: 'success'})

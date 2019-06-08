@@ -28,8 +28,13 @@ const execute = async() => {
 
 const getItem = () => {
     return Items.findOne({ pushedToEtsy: 0, createdMockup: 1 })
-        .populate('mockup')
-        .populate('keywords')
+        .populate({
+            path: 'template',
+            populate: [
+                { path: 'mockup' },
+                { path: 'keywords' }
+            ]
+        })
         .populate('account')
         .exec()
 }
