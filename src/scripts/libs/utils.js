@@ -50,89 +50,97 @@ const getOauth = (account) => {
     return oauth
 }
 
-const pushItem = (oauth, data) => {
-    return new Promise((resolve, reject) => {
-        request.post(
-            {
-                url: "https://openapi.etsy.com/v2/listings",
-                oauth: oauth,
-                qs: data,
-                json: true
-            },
-            function(err, response, body) {
-                if (err) return reject(err)
+const pushItem = (oauth, data, proxy) => {
+    let options = {
+        url: "https://openapi.etsy.com/v2/listings",
+        oauth: oauth,
+        qs: data,
+        json: true
+    }
 
-                try {
-                    let listingId = body.results[0].listing_id
-                    return resolve(listingId)
-                } catch(e) {
-                    console.log('Error pushitem', e)
-                    return reject({
-                        error: 'Pushing item error',
-                        message: body
-                    })
-                }
+    if (proxy) {
+        options['proxy'] = proxy
+    }
+
+    return new Promise((resolve, reject) => {
+        request.post(options, (err, response, body) => {
+            if (err) return reject(err)
+
+            try {
+                let listingId = body.results[0].listing_id
+                return resolve(listingId)
+            } catch(e) {
+                console.log('Error pushitem', e)
+                return reject({
+                    error: 'Pushing item error',
+                    message: body
+                })
             }
-        )
+        })
     })
 }
 
-const updateImage = (oauth, id, file) => {
-    return new Promise((resolve, reject) => {
-        let r = request.post(
-            {
-                url: `https://openapi.etsy.com/v2/listings/${id}/images`,
-                headers: {
-                    "Content-Type": "multipart/form-data"
-                },
-                oauth: oauth
-            },
-            function(err, response, body) {
-                if (err) {
-                    return reject({
-                        error: 'Update image error',
-                        message: err
-                    })
-                } 
-                resolve(body)
-            }
-        )
+const updateImage = (oauth, id, file, proxy) => {
+    let options = {
+        url: `https://openapi.etsy.com/v2/listings/${id}/images`,
+        headers: {
+            "Content-Type": "multipart/form-data"
+        },
+        oauth: oauth
+    }
 
-        let form = r.form()
+    if (proxy) {
+        options['proxy'] = proxy
+    }
+
+    return new Promise((resolve, reject) => {
+        let req = r.post(options, (err, response, body) => {
+            if (err) {
+                return reject({
+                    error: 'Update image error',
+                    message: err
+                })
+            } 
+            resolve(body)
+        })
+
+        let form = req.form()
         form.append("image", fs.createReadStream(file))
     })
 }
 
-const updateVariations = (oauth, id, price, type) => {
+const updateVariations = (oauth, id, price, type, proxy) => {
     let data = getVariations(id, price, type)
-    
+    let options = {
+        url: `https://openapi.etsy.com/v2/listings/${id}/inventory`,
+        oauth: oauth,
+        form: data
+    }
+
+    if (proxy) {
+        options['proxy'] = proxy
+    }
+
     return new Promise((resolve, reject) => {
-        request.put(
-            {
-                url: `https://openapi.etsy.com/v2/listings/${id}/inventory`,
-                oauth: oauth,
-                form: data
-            },
-            function(err, response, body) {
-                if (err) {
-                    return reject({
-                        error: 'Update Variations error',
-                        message: error
-                    })
-                }
-
-                try {
-                    body = JSON.parse(body)
-                } catch(e) {
-                    return reject({
-                        error: 'Update variations error',
-                        message: body
-                    })
-                }
-
-                resolve()
+        r.put(options, (err, response, body) => {
+            if (err) {
+                return reject({
+                    error: 'Update Variations error',
+                    message: error
+                })
             }
-        )
+
+            try {
+                body = JSON.parse(body)
+            } catch(e) {
+                return reject({
+                    error: 'Update variations error',
+                    message: body
+                })
+            }
+
+            resolve()
+        })
     })
 }
 
@@ -146,7 +154,7 @@ const processItem = async(item) => {
     } = item
     let { mockup, keywords, description } = template
     let {price, type} = mockup
-    let {shipping_template} = account
+    let {shipping_template, proxy} = account
     let tags = ''
 
     type = type || 'tshirt'
@@ -161,7 +169,7 @@ const processItem = async(item) => {
         let data = {
             quantity: 999,
             title,
-            description: description ? `${title}\n${description}` : `${title}\n${DESCRIPTION}`,
+            description: description ? `${title}\n\n${description}` : `${title}\n\n${DESCRIPTION}`,
             price,
             who_made: 'i_did',
             is_supply: false,
@@ -173,22 +181,22 @@ const processItem = async(item) => {
         }
 
         let oauth = getOauth(account)
-        let listingId = await pushItem(oauth, data)
+        let listingId = await pushItem(oauth, data, proxy)
 
         let sizes = fs.readdirSync(path.join(__dirname, '../../public/images/size/'))
 
         for (const size of sizes) {
             let sizePath = path.join(__dirname, '../../public/images/size/' + size)
-            await updateImage(oauth, listingId, sizePath)
+            await updateImage(oauth, listingId, sizePath, proxy)
         }
 
         let files = fs.readdirSync(path.join(__dirname, '../../public/images/products/' + name + '/'))
 
         for (const file of files) {
             let filePath = path.join(__dirname, '../../public/images/products/' + name + '/' + file)
-            await updateImage(oauth, listingId, filePath)
+            await updateImage(oauth, listingId, filePath, proxy)
         }
-        await updateVariations(oauth, listingId, price, type)
+        await updateVariations(oauth, listingId, price, type, proxy)
     } catch(e) {
         throw e
     }

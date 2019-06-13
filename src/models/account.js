@@ -11,7 +11,8 @@ const Accounts = new Schema({
     token: String,
     token_secret: String,
     is_disabled: {type: Boolean, default: true},
-    shipping_template: Schema.Types.Mixed
+    shipping_template: Schema.Types.Mixed,
+    proxy: String
 }, { collection: 'account' });
 
 export default mongoose.model('account', Accounts);

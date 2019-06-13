@@ -26,7 +26,7 @@ const execute = async() => {
 }
 
 const getItem = () => {
-    return Items.findOne({ createdMockup: {$ne: 1} })
+    return Items.findOne({ createdMockup: 0 })
         .populate({path: 'template', populate: {
             path: 'mockup'
         }})

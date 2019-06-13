@@ -6,8 +6,11 @@
         <div style="width: 100%; height:auto; margin-top: 30px; background-color: white;">
             <table id="buzz-grid" class="table table-striped table-bordered table-hover">
                 <tr>
-                    <th width="40%">
+                    <th width="25%">
                         name
+                    </th>
+                    <th width="20%">
+                        proxy
                     </th>
                     <th width="10%">
                         default
@@ -21,13 +24,14 @@
                     <th width="10%">
                         cup
                     </th>
-                    <th width="20%">
+                    <th width="15%">
                         action
                     </th>
                 </tr>
                 <% accounts.forEach(account => { %>
                 <tr>
                     <td class="item-name"><%= account.name %></td>
+                    <td class="item-proxy"><%= account.proxy || '' %></td>
                     <td class="item-shipping-id" ><%= account.shipping_template ? account.shipping_template.default : '' %></td>
                     <td class="item-shipping-id" ><%= account.shipping_template ? account.shipping_template.tshirt : '' %></td>
                     <td class="item-shipping-id" ><%= account.shipping_template ? account.shipping_template.poster : '' %></td>
@@ -53,6 +57,10 @@
                     <div class="form-group">
                         <label for="name">Name:</label>
                         <input class="form-control" placeholder="Enter name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Proxy:</label>
+                        <input class="form-control" placeholder="Enter proxy" name="proxy">
                     </div>
                     <div class="form-group">
                         <div class="row mt-3">
@@ -99,10 +107,11 @@
             let {shipping_template} = data
 
             $(this).find('input[name="name"]').val(data.name || '')
-            $(this).find('input[name="default"]').val(shipping_template.default || 0)
-            $(this).find('input[name="tshirt"]').val(shipping_template.tshirt || 0)
-            $(this).find('input[name="poster"]').val(shipping_template.poster || 0)
-            $(this).find('input[name="cup"]').val(shipping_template.cup || 0)
+            $(this).find('input[name="proxy"]').val(data.proxy || '')
+            $(this).find('input[name="default"]').val(shipping_template ? shipping_template.default : 0)
+            $(this).find('input[name="tshirt"]').val(shipping_template ? shipping_template.tshirt : 0)
+            $(this).find('input[name="poster"]').val(shipping_template ? shipping_template.poster : 0)
+            $(this).find('input[name="cup"]').val(shipping_template ? shipping_template.cup : 0)
 
             $(this).find('#btnSave').attr('data-id', data._id)
         })
@@ -115,6 +124,7 @@
             } 
 
             let name = $(form).find('input[name="name"]').val()
+            let proxy = $(form).find('input[name="proxy"]').val()
             let sdefault = $(form).find('input[name="default"]').val()
             let tshirt = $(form).find('input[name="tshirt"]').val()
             let poster = $(form).find('input[name="poster"]').val()
@@ -124,6 +134,7 @@
             let data = {
                 id,
                 name,
+                proxy,
                 shipping_template: {
                     default: sdefault,
                     tshirt,

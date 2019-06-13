@@ -5,17 +5,17 @@ let account = express.Router()
 
 account.route('/')
 	.get(async (req, res) => {
-        let accounts = await Accounts.find()
+        let accounts = await Accounts.find({}, {_id: 1, name: 1, proxy: 1, shipping_template: 1})
 
 		return res.render('account', {
             accounts: accounts
         })
     })
     .put(async(req, res) => {
-        let {id, shipping_template, name} = req.body
+        let {id, shipping_template, name, proxy} = req.body
 
         try {
-            await Accounts.findByIdAndUpdate(id, {shipping_template, name, is_disabled: false})
+            await Accounts.findByIdAndUpdate(id, {shipping_template, name, proxy, is_disabled: false})
             return res.json({'message': 'Update successful'})
         } catch(e) {
             console.log(e)
