@@ -122,7 +122,7 @@ const updateVariations = (oauth, id, price, type, proxy) => {
     }
 
     return new Promise((resolve, reject) => {
-        r.put(options, (err, response, body) => {
+        request.put(options, (err, response, body) => {
             if (err) {
                 return reject({
                     error: 'Update Variations error',
