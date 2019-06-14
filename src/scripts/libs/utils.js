@@ -94,7 +94,7 @@ const updateImage = (oauth, id, file, proxy) => {
     }
 
     return new Promise((resolve, reject) => {
-        let req = r.post(options, (err, response, body) => {
+        let req = request.post(options, (err, response, body) => {
             if (err) {
                 return reject({
                     error: 'Update image error',
