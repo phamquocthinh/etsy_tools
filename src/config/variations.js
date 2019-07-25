@@ -1,5 +1,6 @@
 const getVariations = (listingId, price) => {
     let sizes = [
+        'Unisex Tee - XS',
         'Unisex Tee - S',
         'Unisex Tee - M',
         'Unisex Tee - L',
@@ -44,6 +45,7 @@ const getVariations = (listingId, price) => {
             if(s.indexOf('4XL') > -1) priceVal += 4
             if(s.indexOf('3XL') > -1) priceVal += 3
             if(s.indexOf('2XL') > -1) priceVal += 2
+            if(s.indexOf('XS') > -1) priceVal = 19.95
             
             if(s.indexOf('Ladies') > -1) priceVal += 2
             if(s.indexOf('Hoodie') > -1) priceVal += 15
